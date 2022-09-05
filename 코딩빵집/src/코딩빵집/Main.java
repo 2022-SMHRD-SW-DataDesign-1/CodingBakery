@@ -9,6 +9,7 @@ public class Main {
 	System.out.println("±èÁÖÈñ");
 		
  System.out.println("ÄÚµù»§Áı Â¯!");
+ ¾î·Æ¾î·Æ
 	}
 
 }
