@@ -1,4 +1,4 @@
-package ³Í¼¾½ºÄûÁî;
+package Quiz;
 
 public class QuizDTO {
 	private int Qnum;

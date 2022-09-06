@@ -1,4 +1,4 @@
-package ³Í¼¾½ºÄûÁî;
+package Quiz;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
