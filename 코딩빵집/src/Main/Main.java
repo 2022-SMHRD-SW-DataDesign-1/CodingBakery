@@ -38,12 +38,13 @@ public class Main {
 
 		QuizDAO qdao = new QuizDAO();
 
-		
 		int cnt = 0;
 
 		title.title(); // 코딩빵집 타이틀 출력
 		img.Sand();
-
+		System.out.println("먹고싶쥐이~~~~?");
+		System.out.println();
+		
 		while (true) {
 			int score = 0;
 
@@ -66,10 +67,10 @@ public class Main {
 					System.out.println("메뉴선택");
 					System.out.print("[1]빵 단품 [2]빵 세트 ");
 					int menu = sc.nextInt();
-					if (menu == 1) { // 단품
+					if (menu == 1) { // 빵 단품
 						extracted(sc, qdao);
-					} else { // 세트
-						// 빵 출력하기
+					} else { // 빵 세트
+						img.Bread();
 						System.out.println("세뚜세뚜를 즐기고 싶다면?");
 						extracted(sc, qdao);
 					}
@@ -80,14 +81,14 @@ public class Main {
 					if (menu == 1) { // 단품
 						extracted(sc, qdao);
 					} else { // 세트
-						// 빵 출력하기
+						img.Sand();
 						System.out.println("세뚜세뚜를 즐기고 싶다면?");
 						extracted(sc, qdao);
 					}
 					cnt = rdao.rankInsert(phone, score);
 				}
 
-			} else if (choice == 2) { 
+			} else if (choice == 2) {
 				System.out.print("이름 입력 : ");
 				String name = sc.next();
 				System.out.print("폰번호 입력 : ");
@@ -105,7 +106,7 @@ public class Main {
 					if (menu == 1) { // 단품
 						extracted(sc, qdao);
 					} else { // 세트
-						// 빵 출력하기
+						
 						System.out.println("세뚜세뚜를 즐기고 싶다면?");
 						extracted(sc, qdao);
 					}
@@ -161,7 +162,5 @@ public class Main {
 			}
 		}
 	}
-	
-	
-	
+
 }
