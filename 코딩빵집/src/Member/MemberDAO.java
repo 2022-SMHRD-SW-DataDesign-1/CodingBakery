@@ -72,12 +72,16 @@ public class MemberDAO {
 			e.printStackTrace();
 		}
 
-		return result; }
+		return result; 
+	}
+
 
 	public int insert(MemberDTO dto) { 
 		int cnt = 0;
 
+
 		
+
 		connect();
 
 		try {
