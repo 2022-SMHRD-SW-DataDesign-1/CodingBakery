@@ -43,14 +43,6 @@ public class QuizDAO {
 
 		try {
 
-			String sql2 = "select max(qnum) from quiz_list";
-			psmt = conn.prepareStatement(sql2);
-
-			rs = psmt.executeQuery();
-			while (rs.next()) {
-				this.ran = rs.getInt(1);
-			}
-
 			qnum = rd.nextInt(20) + 1;
 			this.sleq = qnum;
 			String sql = "select * from quiz_list where qnum = ?";
@@ -63,7 +55,7 @@ public class QuizDAO {
 			while (rs.next()) {
 				String quiz = rs.getString(2);
 				this.quiz = quiz;
-				String answer = rs.getString(2);
+				String answer = rs.getString(3);
 				this.answer = answer;
 
 				System.out.printf("%s", quiz);
@@ -76,7 +68,6 @@ public class QuizDAO {
 	}
 
 	public boolean isCorr(String input) {
-
 		return input.equals(answer);
 
 	}

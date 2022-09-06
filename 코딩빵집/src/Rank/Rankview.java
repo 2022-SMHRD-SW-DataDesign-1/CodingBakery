@@ -28,7 +28,7 @@ public class Rankview {
 			System.out.println("DB연결 실패");
 			e.printStackTrace();
 		}
-		
+
 		String sql = "select * from (select * from rank order by score desc) where rownum<=10";
 
 		try {
@@ -40,16 +40,16 @@ public class Rankview {
 				System.out.println(rs.getString(2) + "\t");
 			}
 		} catch (SQLException e) {
-		} finally {
-			try {
-				if (rs != null)
-					rs.close();
-				if (psmt != null)
-					psmt.close();
-				if (conn != null)
-					conn.close();
-			} catch (SQLException e) {
-			}
+			e.printStackTrace();
+		}
+		try {
+			if (rs != null)
+				rs.close();
+			if (psmt != null)
+				psmt.close();
+			if (conn != null)
+				conn.close();
+		} catch (SQLException e) {
 		}
 
 	}
