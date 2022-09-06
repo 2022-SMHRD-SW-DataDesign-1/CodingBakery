@@ -34,10 +34,21 @@ public class QuizDAO {
 			e.printStackTrace();
 		}
 	}
+
 	public void getQuiz(int qnum) {
 		connect();
 
 		try {
+			int ran = 0;
+			String sql2 = "select max(qnum) from quiz_list";
+			psmt = conn.prepareStatement(sql2);
+
+			rs = psmt.executeQuery();
+			while (rs.next()) {
+				ran = rs.getInt(1);
+			}
+
+			qnum = rd.nextInt(ran) + 1;
 			String sql = "select * from quiz_list where qnum = ?";
 			psmt = conn.prepareStatement(sql);
 			psmt.setInt(1, qnum);
@@ -56,4 +67,5 @@ public class QuizDAO {
 		}
 
 	}
+
 }
