@@ -6,7 +6,12 @@ public class MemberDTO {
 	private String name;
 	private int phone;
 
-	// get, set 메소드
+	public MemberDTO(String name, int phone) {
+		super();
+		this.name = name;
+		this.phone = phone;
+	}
+
 	public String getName() {
 		return name;
 	}
@@ -15,25 +20,12 @@ public class MemberDTO {
 		this.name = name;
 	}
 
-	public int getNum() {
+	public int getPhone() {
 		return phone;
 	}
 
-	public void setNum(int phone) {
+	public void setPhone(int phone) {
 		this.phone = phone;
-	}
-
-	// 회원등록 메소드
-	public MemberDTO(String name, int num) {
-		super();
-		this.name = name;
-		this.phone = num;
-	}
-
-	// 로그인 메소드
-	public MemberDTO(int num) {
-		super();
-		this.phone = num;
 	}
 
 }
