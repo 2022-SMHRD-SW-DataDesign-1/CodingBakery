@@ -2,7 +2,7 @@ package Rank;
 
 public class RankDTO {
 
-	int phone;
+	private int phone;
 	int score;
 
 	public RankDTO(int phone, int score) {

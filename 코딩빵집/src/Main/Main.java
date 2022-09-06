@@ -6,6 +6,7 @@ import java.util.Scanner;
 import Member.MemberDAO;
 import Member.MemberDTO;
 import Rank.RankDAO;
+import Rank.RankDTO;
 import Rank.Rankview;
 import topping.image;
 import topping.story;
@@ -19,6 +20,7 @@ public class Main {
 		MemberDTO dto = null;
 		Rankview rank = new Rankview();
 		RankDAO rdao = new RankDAO();
+		RankDTO rdto;
 		Controller lm = new Controller();
 		image img = new image();
 		Scanner sc = new Scanner(System.in);
@@ -43,12 +45,12 @@ public class Main {
 				System.out.println();
 
 				System.out.println("주문 하시겠습니까? ");
-				System.out.println("[1]매장식사 [2]포장");
+				System.out.print("[1]매장식사 [2]포장 ");
 				int order = sc.nextInt();
 
 				if (order == 1) { // 매장식사
 					System.out.println("메뉴선택");
-					System.out.print("[1]빵 단품 [2]빵 세트");
+					System.out.print("[1]빵 단품 [2]빵 세트 ");
 					int menu = sc.nextInt();
 
 					if (menu == 1) { // 단품
@@ -62,7 +64,7 @@ public class Main {
 					}
 				} else { // 포장
 					System.out.println("메뉴선택");
-					System.out.print("[1]빵 단품 [2]빵 세트");
+					System.out.print("[1]빵 단품 [2]빵 세트 ");
 					int menu = sc.nextInt();
 
 					if (menu == 1) { // 단품
@@ -75,6 +77,11 @@ public class Main {
 						// 가격 출력하기
 					}
 				}
+				int cnt = rdao.rankInsert(phone, score);
+				if (cnt > 0) {
+					System.out.println("성공");
+				}
+
 			} else if (choice == 2) {
 				System.out.print("이름 입력 : ");
 				String name = sc.next();
@@ -85,12 +92,13 @@ public class Main {
 				System.out.println();
 
 				System.out.println("주문 하시겠습니까? ");
-				System.out.println("[1]매장식사 [2]포장");
+				System.out.print("[1]매장식사 [2]포장 ");
 				int order = sc.nextInt();
+				System.out.println();
 
 				if (order == 1) { // 매장식사
 					System.out.println("메뉴선택");
-					System.out.print("[1]빵 단품 [2]빵 세트");
+					System.out.print("[1]빵 단품 [2]빵 세트 ");
 					int menu = sc.nextInt();
 
 					if (menu == 1) { // 단품
@@ -105,7 +113,7 @@ public class Main {
 					}
 				} else { // 포장
 					System.out.println("메뉴선택");
-					System.out.print("[1]빵 단품 [2]빵 세트");
+					System.out.print("[1]빵 단품 [2]빵 세트 ");
 					int menu = sc.nextInt();
 
 					if (menu == 1) { // 단품
@@ -119,15 +127,21 @@ public class Main {
 						// 가격 출력하기
 					}
 				}
+				int cnt = rdao.rankInsert(phone, score);
+				if (cnt > 0) {
+					System.out.println("성공");
+				}
+				System.out.println();
+
 			} else if (choice == 3) {
 				System.out.println("랭킹을 조회합니다.");
 				rank.rankView();
 			} else if (choice == 4) {
 				System.out.println("프로그램 종료");
 				break;
-			}
-			else {
+			} else {
 				System.out.println("잘못 눌렀습니다.");
+				System.out.println();
 			}
 		}
 		System.out.println("프로그램이 종료되었습니다.");
