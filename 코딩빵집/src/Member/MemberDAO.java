@@ -49,7 +49,7 @@ public class MemberDAO {
 		}
 	}
 
-	public boolean login(String name, int phone) {
+	public boolean login(int phone, String name) {
 
 		connect();
 

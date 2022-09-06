@@ -21,7 +21,7 @@ public class MemberDTO {
 		this.phone = phone;
 	}
 
-	public MemberDTO(String name, int phone) {
+	public MemberDTO(int phone, String name) {
 		super();
 		this.name = name;
 		this.phone = phone;
