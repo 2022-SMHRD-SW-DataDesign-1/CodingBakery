@@ -14,8 +14,10 @@ public class QuizDAO {
 	ResultSet rs;
 	boolean result;
 	int ran = 0;
-	int iscor = 0;
+	int sleq = 0;
 	Random rd = new Random();
+	String quiz = null;
+	String answer = null;
 
 	private void connect() {
 		try {
@@ -46,11 +48,11 @@ public class QuizDAO {
 
 			rs = psmt.executeQuery();
 			while (rs.next()) {
-				ran = rs.getInt(1);
+				this.ran = rs.getInt(1);
 			}
 
 			qnum = rd.nextInt(ran) + 1;
-			this.iscor = qnum;
+			this.sleq = qnum;
 			String sql = "select * from quiz_list where qnum = ?";
 			psmt = conn.prepareStatement(sql);
 			psmt.setInt(1, qnum);
@@ -60,6 +62,9 @@ public class QuizDAO {
 			System.out.println("Quiz");
 			while (rs.next()) {
 				String quiz = rs.getString(2);
+				this.quiz = quiz;
+				String answer = rs.getString(2);
+				this.answer = answer;
 
 				System.out.printf("%s", quiz);
 			}
@@ -70,26 +75,10 @@ public class QuizDAO {
 
 	}
 
-	public boolean isCorr(String answer, int iscor) {
-		connect();
-		String cor = null;
-		try {
-			String sql = "select * from quiz_list where qnum = ?";
-			psmt = conn.prepareStatement(sql);
+	public boolean isCorr(String input) {
 
-			psmt.setInt(1, iscor);
-			rs = psmt.executeQuery();
+		return input.equals(answer);
 
-			System.out.println("Quiz");
-			while (rs.next()) {
-				cor = rs.getString(3);
-			}
-
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-
-		return cor.equals(answer);
 	}
 
 }
