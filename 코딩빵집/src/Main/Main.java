@@ -5,6 +5,9 @@ import java.util.Scanner;
 import Member.MemberDAO;
 import Member.MemberDTO;
 import Rank.Rankview;
+import 토핑.image;
+import 토핑.story;
+
 
 public class Main {
 
@@ -13,12 +16,12 @@ public class Main {
 		MemberDAO dao = new MemberDAO();
 		MemberDTO dto = null;
 		Rankview rank = new Rankview();
+		image img = new image();
 		Scanner sc = new Scanner(System.in);
-
-		System.out.println("코딩빵집");
-		System.out.println("샌드위치를 먹으려는 자, 센스를 갖춰라!!");
-		System.out.println("샌드위치의 토핑을 추가하고 싶으면 넌센스의 정답을 맞춰야 한다");
-		System.out.println("센스가 없는 당신, 샌드위치 빵만 먹게 될 지어다~~~~.");
+		story title = new story();
+		
+		title.title();
+		
 		while (true) {
 			System.out.println("선택하시오");
 			System.out.print("[1]회원등록  [2]로그인  [3]랭킹조회  [4]종료");
@@ -42,7 +45,7 @@ public class Main {
 				lm.LoginCon(name, number);
 			} else if (choice == 3) {
 				System.out.println("랭킹을 조회합니다.");
-				System.out.print("죄회할 폰넘버");
+				System.out.print("조회할 폰넘버");
 				int number = sc.nextInt();
 
 				lm.SelectCon(number);
