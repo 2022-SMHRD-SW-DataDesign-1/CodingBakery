@@ -54,10 +54,8 @@ public class Main {
 					int number3 = sc.nextInt();
 					if (number3 == 1) {
 						System.out.println("퀴즈를 통한 토핑추가");
-						rdao.rankInsert(number, score);
 					} else {
 						System.out.println("퀴즈를 통한 토핑추가");
-						rdao.rankInsert(number, score);
 					}
 				} else {
 					System.out.println("메뉴선택");
@@ -65,10 +63,8 @@ public class Main {
 					int number3 = sc.nextInt();
 					if (number == 2) {
 						System.out.println("퀴즈를 통한 토핑추가");
-						rdao.rankInsert(number, score);
 					} else {
 						System.out.println("퀴즈를 통한 토핑추가");
-						rdao.rankInsert(number, score);
 					}
 				}
 			} else if (choice == 2) {
@@ -89,10 +85,8 @@ public class Main {
 					int number3 = sc.nextInt();
 					if (number3 == 1) {
 						System.out.println("퀴즈를 통한 토핑추가");
-						rdao.rankInsert(number, score);
 					} else {
 						System.out.println("퀴즈를 통한 토핑추가");
-						rdao.rankInsert(number, score);
 					}
 				} else {
 					System.out.println("메뉴선택");
@@ -100,10 +94,8 @@ public class Main {
 					int number3 = sc.nextInt();
 					if (number == 2) {
 						System.out.println("퀴즈를 통한 토핑추가");
-						rdao.rankInsert(number, score);
 					} else {
 						System.out.println("퀴즈를 통한 토핑추가");
-						rdao.rankInsert(number, score);
 					}
 				}
 			} else if (choice == 3) {
