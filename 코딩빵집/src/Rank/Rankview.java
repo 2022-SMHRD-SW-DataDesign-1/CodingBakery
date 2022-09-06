@@ -30,7 +30,7 @@ public class Rankview {
 		try {
 			psmt = conn.prepareStatement(sql);
 			rs = psmt.executeQuery();
-			System.out.print("      -회원번호-\t-점수-\n");
+			System.out.print("-회원번호-\t-점수-\n");
 			while (rs.next()) {
 				System.out.print(rs.getString(1)+"\t\t");
 				System.out.println(rs.getString(2)+"\t");
