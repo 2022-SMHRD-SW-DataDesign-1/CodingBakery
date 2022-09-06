@@ -65,6 +65,7 @@ public class Main {
 					System.out.println("메뉴선택");
 					System.out.print("[1]빵 단품 [2]빵 세트 ");
 					int menu = sc.nextInt();
+					img.Bread();
 					if (menu == 1) { // 단품
 						extracted(sc, qdao);
 					} else { // 세트
@@ -76,6 +77,7 @@ public class Main {
 					System.out.println("메뉴선택");
 					System.out.print("[1]빵 단품 [2]빵 세트 ");
 					int menu = sc.nextInt();
+					img.Bread();
 					if (menu == 1) { // 단품
 						extracted(sc, qdao);
 					} else { // 세트
@@ -101,6 +103,7 @@ public class Main {
 					System.out.println("메뉴선택");
 					System.out.print("[1]빵 단품 [2]빵 세트 ");
 					int menu = sc.nextInt();
+					img.Bread();
 					if (menu == 1) { // 단품
 						extracted(sc, qdao);
 					} else { // 세트
@@ -112,6 +115,7 @@ public class Main {
 					System.out.println("메뉴선택");
 					System.out.print("[1]빵 단품 [2]빵 세트 ");
 					int menu = sc.nextInt();
+					img.Bread();
 					if (menu == 1) { // 단품
 						extracted(sc, qdao);
 					} else { // 세트
