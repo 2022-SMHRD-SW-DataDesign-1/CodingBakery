@@ -118,6 +118,7 @@ public class Main {
 						// 음료 출력하기
 						// 가격 출력하기
 					}
+					rdao.rankInsert(phone, score);
 				}
 			} else if (choice == 3) {
 				System.out.println("랭킹을 조회합니다.");
@@ -125,8 +126,7 @@ public class Main {
 			} else if (choice == 4) {
 				System.out.println("프로그램 종료");
 				break;
-			}
-			else {
+			} else {
 				System.out.println("잘못 눌렀습니다.");
 			}
 		}

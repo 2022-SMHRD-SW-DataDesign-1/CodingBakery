@@ -16,16 +16,16 @@ public class RankDAO {
 
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			
-			String db = "jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe";
+
+			String url = "jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe";
 			String db_id = "campus_g_0830_3";
 			String db_pw = "smhrd3";
-			
-			conn = DriverManager.getConnection(db, db_id, db_pw);
+
+			conn = DriverManager.getConnection(url, db_id, db_pw);
 		} catch (ClassNotFoundException e) {
 			System.out.println("로딩실패");
 			e.printStackTrace();
-		}catch (SQLException e) {
+		} catch (SQLException e) {
 			System.out.println("DB연결 실패");
 			e.printStackTrace();
 		}
@@ -39,17 +39,18 @@ public class RankDAO {
 			psmt.setInt(2, score);
 			cnt = psmt.executeUpdate();
 		} catch (SQLException e) {
-		} finally {
-			try {
-				if (psmt != null) {
-					psmt.close();
-				}
-				if (conn != null) {
-					conn.close();
-				}
-			} catch (SQLException e) {
+			e.printStackTrace();
+		}
 
+		try {
+			if (psmt != null) {
+				psmt.close();
 			}
+			if (conn != null) {
+				conn.close();
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
 		return cnt;
 	}
