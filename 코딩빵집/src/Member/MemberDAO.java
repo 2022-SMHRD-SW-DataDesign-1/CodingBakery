@@ -44,12 +44,12 @@ public class MemberDAO {
 				conn.close();
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 	}
 
-	public boolean login(String name, int phone) {
+	public boolean login(int phone, String name) {
 
 		connect();
 
@@ -63,22 +63,21 @@ public class MemberDAO {
 			rs = psmt.executeQuery();
 
 			if (rs.next()) {
-				result = true; // cnt = 1;
+				result = true; 
 			} else {
-				result = false; // cnt = 0
+				result = false; 
 			}
 
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 
-		return result; // result -> cnt
-	}
+		return result; }
 
-	public int insert(MemberDTO dto) { // void -> int
-		int cnt = 0;// 초반에(insert는 행의 값이 변경 int 타입으로 값 리턴)
+	public int insert(MemberDTO dto) { 
+		int cnt = 0;
 
-		// 1. 동적로딩(선행작업 필요)
+		
 		connect();
 
 		try {
@@ -94,16 +93,16 @@ public class MemberDAO {
 			cnt = psmt.executeUpdate();
 
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+		
 			e.printStackTrace();
 		}
 
 //	
-		return cnt; // 초반에
+		return cnt; 
 	}
 
 	public int update(MemberDTO dto) {
-		int cnt = 0; // 얘도 전역변수로 만들어 버리기
+		int cnt = 0; 
 		connect();
 
 		try {
