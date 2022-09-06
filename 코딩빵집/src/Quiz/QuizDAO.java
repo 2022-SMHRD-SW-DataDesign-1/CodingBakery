@@ -42,18 +42,9 @@ public class QuizDAO {
 		connect();
 
 		try {
-
-			String sql2 = "select max(qnum) from quiz_list";
-			psmt = conn.prepareStatement(sql2);
-
-			rs = psmt.executeQuery();
-			while (rs.next()) {
-				this.ran = rs.getInt(1);
-			}
-
-			qnum = rd.nextInt(ran) + 1;
+			qnum = rd.nextInt(20) + 1;
 			this.sleq = qnum;
-			String sql = "select * from quiz_list where qnum = ?";
+			String sql = "select quiz from quiz_list where qnum = ?";
 			psmt = conn.prepareStatement(sql);
 			psmt.setInt(1, qnum);
 
