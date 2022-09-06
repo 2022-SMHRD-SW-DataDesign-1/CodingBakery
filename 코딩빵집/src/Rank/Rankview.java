@@ -14,17 +14,21 @@ public class Rankview {
 	public void rankView() {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
+
+			String url = "jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe";
+			String db_id = "campus_g_0830_3";
+			String db_pw = "smhrd3";
+
+			conn = DriverManager.getConnection(url, db_id, db_pw);
+
 		} catch (ClassNotFoundException e) {
-		}
-		String db = "jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe";
-		String db_id = "campus_g_0830_3";
-		String db_pw = "smhrd3";
-
-		try {
-			conn = DriverManager.getConnection(db, db_id, db_pw);
+			System.out.println("로딩실패");
+			e.printStackTrace();
 		} catch (SQLException e) {
+			System.out.println("DB연결 실패");
+			e.printStackTrace();
 		}
-
+		
 		String sql = "select * from (select * from rank order by score desc) where rownum<=10";
 
 		try {
