@@ -24,7 +24,7 @@ public class MemberDTO {
 	}
 
 	// 회원등록 메소드
-	public MemberDTO(String name, int num) {
+	public MemberDTO(int num, String name) {
 		super();
 		this.name = name;
 		this.phone = num;

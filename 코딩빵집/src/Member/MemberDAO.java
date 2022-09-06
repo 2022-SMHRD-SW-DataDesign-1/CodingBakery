@@ -57,5 +57,10 @@ public class MemberDAO {
 
 	}
 
+	public boolean login(int phone, String name) {
+		
+		return false;
+	}
+
 
 }

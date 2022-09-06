@@ -1,13 +1,11 @@
 package Controller;
 
+import Member.MemberDAO;
+import Member.MemberDTO;
+
 public class Controller {
 
 	// ControllerÀÇ ¿ªÇÒ
-import model.MemberDAO;
-import model.MemberDTO;
-
-
-public class LoginManagment {
 
 	
 	MemberDAO dao = new MemberDAO();
