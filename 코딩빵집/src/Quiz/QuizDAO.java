@@ -13,8 +13,11 @@ public class QuizDAO {
 	PreparedStatement psmt = null;
 	ResultSet rs;
 	boolean result;
-
+	int ran = 0;
+	int sleq = 0;
 	Random rd = new Random();
+	String quiz = null;
+	String answer = null;
 
 	private void connect() {
 		try {
@@ -39,17 +42,9 @@ public class QuizDAO {
 		connect();
 
 		try {
-			int ran = 0;
-			String sql2 = "select max(qnum) from quiz_list";
-			psmt = conn.prepareStatement(sql2);
-
-			rs = psmt.executeQuery();
-			while (rs.next()) {
-				ran = rs.getInt(1);
-			}
-
-			qnum = rd.nextInt(ran) + 1;
-			String sql = "select * from quiz_list where qnum = ?";
+			qnum = rd.nextInt(20) + 1;
+			this.sleq = qnum;
+			String sql = "select quiz from quiz_list where qnum = ?";
 			psmt = conn.prepareStatement(sql);
 			psmt.setInt(1, qnum);
 
@@ -58,6 +53,9 @@ public class QuizDAO {
 			System.out.println("Quiz");
 			while (rs.next()) {
 				String quiz = rs.getString(2);
+				this.quiz = quiz;
+				String answer = rs.getString(2);
+				this.answer = answer;
 
 				System.out.printf("%s", quiz);
 			}
@@ -65,6 +63,12 @@ public class QuizDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+
+	}
+
+	public boolean isCorr(String input) {
+
+		return input.equals(answer);
 
 	}
 
