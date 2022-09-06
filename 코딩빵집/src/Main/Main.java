@@ -11,8 +11,6 @@ import Rank.RankDAO;
 import Rank.RankDTO;
 import Rank.Rankview;
 
-import 넌센스퀴즈.Quiz;
-
 import topping.image;
 import topping.story;
 
@@ -41,7 +39,6 @@ public class Main {
 
 		int cnt = 0;
 		title.title(); // 코딩빵집 타이틀 출력
-	
 
 		int score = 0;
 		while (true) {
@@ -64,7 +61,8 @@ public class Main {
 					System.out.println("메뉴선택");
 					System.out.print("[1]빵 단품 [2]빵 세트 ");
 					int menu = sc.nextInt();
-					img.Bread();
+
+					System.out.println(img.img1(6));
 					if (menu == 1) { // 단품
 						while (true) {
 							System.out.println("빵 토핑을 추가하시겠습니까?");
@@ -72,7 +70,7 @@ public class Main {
 
 							int add = sc.nextInt();
 
-							if (add == 1) {
+							if (add > 0 && add < 5) {
 								System.out.println("당신의 센스를 뽐내는 타임~~마");
 								System.out.println();
 								qdao.getQuiz(0);
@@ -85,7 +83,169 @@ public class Main {
 									System.out.println("토핑 획득 성공!!");
 									System.out.println("아싸~ 10점 획득!!!");
 									score += 10;
-									img.Haem();
+									System.out.println(img.img1(add - 1));
+								} else {
+									System.out.println("땡!!!!!!!!!");
+									System.out.println("다시 도전하세요!");
+								}
+
+							} else {
+								System.out.println("주문완료! 퍽퍽할걸~?");
+								System.out.println("결제할 금액 : ");
+								break;
+							}
+
+						}
+					} else { // 세트
+						System.out.println("세뚜세뚜를 즐기고 싶다면?");
+						System.out.println(img.img1(6));
+						while (true) {
+							System.out.println("빵 토핑을 추가하시겠습니까?");
+							System.out.println("[1]햄 [2]치즈 [3]야채 [4]소스 [5]추가안함");
+
+							int add = sc.nextInt();
+
+							if (add > 0 && add < 5) {
+								System.out.println("당신의 센스를 뽐내는 타임~~마");
+								System.out.println();
+								qdao.getQuiz(0);
+								System.out.println();
+								System.out.println("정답 입력 >> ");
+								String inputAnswer = sc.next();
+								qdao.isCorr(inputAnswer);
+								if (qdao.isCorr(inputAnswer) == true) {
+									System.out.println("정답입니다!");
+									System.out.println("토핑 획득 성공!!");
+									System.out.println("아싸~ 10점 획득!!!");
+									score += 10;
+									System.out.println(img.img1(add - 1));
+								} else {
+									System.out.println("땡!!!!!!!!!");
+									System.out.println("다시 도전하세요!");
+								}
+
+							} else {
+								System.out.println("주문완료! 퍽퍽할걸~?");
+								System.out.println("결제할 금액 : ");
+								break;
+							}
+						}
+					}
+				} else { // 포장
+					System.out.println("메뉴선택");
+					System.out.print("[1]빵 단품 [2]빵 세트 ");
+					int menu = sc.nextInt();
+					if (menu == 1) { // 단품
+						System.out.println(img.img1(6));
+						while (true) {
+							System.out.println("빵 토핑을 추가하시겠습니까?");
+							System.out.println("[1]햄 [2]치즈 [3]야채 [4]소스 [5]추가안함");
+
+							int add = sc.nextInt();
+
+							if (add > 0 && add < 5) {
+								System.out.println("당신의 센스를 뽐내는 타임~~마");
+								System.out.println();
+								qdao.getQuiz(0);
+								System.out.println();
+								System.out.println("정답 입력 >> ");
+								String inputAnswer = sc.next();
+								qdao.isCorr(inputAnswer);
+								if (qdao.isCorr(inputAnswer) == true) {
+									System.out.println("정답입니다!");
+									System.out.println("토핑 획득 성공!!");
+									System.out.println("아싸~ 10점 획득!!!");
+									score += 10;
+									System.out.println(img.img1(add - 1));
+								} else {
+									System.out.println("땡!!!!!!!!!");
+									System.out.println("다시 도전하세요!");
+								}
+
+							} else {
+								System.out.println("주문완료! 퍽퍽할걸~?");
+								System.out.println("결제할 금액 : ");
+								break;
+							}
+						}
+					} else { // 세트
+						// 빵 출력하기
+						System.out.println("세뚜세뚜를 즐기고 싶다면?");
+						System.out.println(img.img1(5));
+						while (true) {
+							System.out.println("빵 토핑을 추가하시겠습니까?");
+							System.out.println("[1]햄 [2]치즈 [3]야채 [4]소스 [5]추가안함");
+
+							int add = sc.nextInt();
+
+							if (add > 0 && add < 5) {
+								System.out.println("당신의 센스를 뽐내는 타임~~마");
+								System.out.println();
+								qdao.getQuiz(0);
+								System.out.println();
+								System.out.println("정답 입력 >> ");
+								String inputAnswer = sc.next();
+								qdao.isCorr(inputAnswer);
+								if (qdao.isCorr(inputAnswer) == true) {
+									System.out.println("정답입니다!");
+									System.out.println("토핑 획득 성공!!");
+									System.out.println("아싸~ 10점 획득!!!");
+									score += 10;
+									System.out.println(img.img1(add - 1));
+								} else {
+									System.out.println("땡!!!!!!!!!");
+									System.out.println("다시 도전하세요!");
+								}
+
+							} else {
+								System.out.println("주문완료! 퍽퍽할걸~?");
+								System.out.println("결제할 금액 : ");
+								break;
+							}
+
+						}
+					}
+					cnt = rdao.rankInsert(phone, score);
+				}
+
+			} else if (choice == 2) {
+				System.out.print("이름 입력 : ");
+				String name = sc.next();
+				System.out.print("폰번호 입력 : ");
+				int phone = sc.nextInt();
+				lm.LoginCon(phone, name);
+				System.out.println();
+				System.out.println("주문 하시겠습니까? ");
+				System.out.print("[1]매장식사 [2]포장 ");
+				int order = sc.nextInt();
+				System.out.println();
+				if (order == 1) { // 매장식사
+					System.out.println("메뉴선택");
+					System.out.print("[1]빵 단품 [2]빵 세트 ");
+					int menu = sc.nextInt();
+					if (menu == 1) { // 단품
+						System.out.println(img.img1(6));
+						while (true) {
+							System.out.println("빵 토핑을 추가하시겠습니까?");
+							System.out.println("[1]햄 [2]치즈 [3]야채 [4]소스 [5]추가안함");
+
+							int add = sc.nextInt();
+
+							if (add > 0 && add < 5) {
+								System.out.println("당신의 센스를 뽐내는 타임~~마");
+								System.out.println();
+								qdao.getQuiz(0);
+								System.out.println();
+								System.out.println("정답 입력 >> ");
+								String inputAnswer = sc.next();
+								qdao.isCorr(inputAnswer);
+
+								if (qdao.isCorr(inputAnswer) == true) {
+									System.out.println("정답입니다!");
+									System.out.println("토핑 획득 성공!!");
+									System.out.println("아싸~ 10점 획득!!!");
+									score += 10;
+									System.out.println(img.img1(add - 1));
 								} else {
 									System.out.println("땡!!!!!!!!!");
 									System.out.println("다시 도전하세요!");
@@ -115,11 +275,20 @@ public class Main {
 								System.out.println("정답 입력 >> ");
 								String inputAnswer = sc.next();
 								qdao.isCorr(inputAnswer);
-
+								if (qdao.isCorr(inputAnswer) == true) {
+									System.out.println("정답입니다!");
+									System.out.println("토핑 획득 성공!!");
+									System.out.println("아싸~ 10점 획득!!!");
+									score += 10;
+									System.out.println(img.img1(add - 1));
+								} else {
+									System.out.println("땡!!!!!!!!!");
+									System.out.println("다시 도전하세요!");
+								}
 
 							} else {
 								System.out.println("주문완료! 퍽퍽할걸~?");
-								System.out.println();
+								System.out.println("결제할 금액 : ");
 								break;
 							}
 
@@ -129,7 +298,6 @@ public class Main {
 					System.out.println("메뉴선택");
 					System.out.print("[1]빵 단품 [2]빵 세트 ");
 					int menu = sc.nextInt();
-					img.Bread();
 					if (menu == 1) { // 단품
 						while (true) {
 							System.out.println("빵 토핑을 추가하시겠습니까?");
@@ -145,139 +313,22 @@ public class Main {
 								System.out.println("정답 입력 >> ");
 								String inputAnswer = sc.next();
 								qdao.isCorr(inputAnswer);
-
-
-							} else {
-								System.out.println("주문완료! 퍽퍽할걸~?");
-								System.out.println();
-								break;
-							}
-
-						}
-					} else { // 세트
-						// 빵 출력하기
-						System.out.println("세뚜세뚜를 즐기고 싶다면?");
-						while (true) {
-							System.out.println("빵 토핑을 추가하시겠습니까?");
-							System.out.println("[1]햄 [2]치즈 [3]야채 [4]소스 [5]추가안함");
-
-							int add = sc.nextInt();
-
-							if (add > 0 && add < 5) {
-								System.out.println("당신의 센스를 뽐내는 타임~~마");
-								System.out.println();
-								qdao.getQuiz(0);
-								System.out.println();
-								System.out.println("정답 입력 >> ");
-								String inputAnswer = sc.next();
-								qdao.isCorr(inputAnswer);
+								if (qdao.isCorr(inputAnswer) == true) {
+									System.out.println("정답입니다!");
+									System.out.println("토핑 획득 성공!!");
+									System.out.println("아싸~ 10점 획득!!!");
+									score += 10;
+									System.out.println(img.img1(add - 1));
+								} else {
+									System.out.println("땡!!!!!!!!!");
+									System.out.println("다시 도전하세요!");
+								}
 
 							} else {
 								System.out.println("주문완료! 퍽퍽할걸~?");
-								System.out.println();
+								System.out.println("결제할 금액 : ");
 								break;
 							}
-
-						}
-					}
-					cnt = rdao.rankInsert(phone, score);
-				}
-
-			} else if (choice == 2) {
-				System.out.print("이름 입력 : ");
-				String name = sc.next();
-				System.out.print("폰번호 입력 : ");
-				int phone = sc.nextInt();
-				lm.LoginCon(phone, name);
-				System.out.println();
-				System.out.println("주문 하시겠습니까? ");
-				System.out.print("[1]매장식사 [2]포장 ");
-				int order = sc.nextInt();
-				System.out.println();
-				if (order == 1) { // 매장식사
-					System.out.println("메뉴선택");
-					System.out.print("[1]빵 단품 [2]빵 세트 ");
-					int menu = sc.nextInt();
-					img.Bread();
-					if (menu == 1) { // 단품
-						while (true) {
-							System.out.println("빵 토핑을 추가하시겠습니까?");
-							System.out.println("[1]햄 [2]치즈 [3]야채 [4]소스 [5]추가안함");
-
-							int add = sc.nextInt();
-
-							if (add > 0 && add < 5) {
-								System.out.println("당신의 센스를 뽐내는 타임~~마");
-								System.out.println();
-								qdao.getQuiz(0);
-								System.out.println();
-								System.out.println("정답 입력 >> ");
-								String inputAnswer = sc.next();
-								qdao.isCorr(inputAnswer);
-
-
-							} else {
-								System.out.println("주문완료! 퍽퍽할걸~?");
-								System.out.println();
-								break;
-							}
-
-						}
-					} else { // 세트
-						// 빵 출력하기
-						System.out.println("세뚜세뚜를 즐기고 싶다면?");
-						while (true) {
-							System.out.println("빵 토핑을 추가하시겠습니까?");
-							System.out.println("[1]햄 [2]치즈 [3]야채 [4]소스 [5]추가안함");
-
-							int add = sc.nextInt();
-
-							if (add > 0 && add < 5) {
-								System.out.println("당신의 센스를 뽐내는 타임~~마");
-								System.out.println();
-								qdao.getQuiz(0);
-								System.out.println();
-								System.out.println("정답 입력 >> ");
-								String inputAnswer = sc.next();
-								qdao.isCorr(inputAnswer);
-
-
-							} else {
-								System.out.println("주문완료! 퍽퍽할걸~?");
-								System.out.println();
-								break;
-							}
-
-						}
-					}
-				} else { // 포장
-					System.out.println("메뉴선택");
-					System.out.print("[1]빵 단품 [2]빵 세트 ");
-					int menu = sc.nextInt();
-					img.Bread();
-					if (menu == 1) { // 단품
-						while (true) {
-							System.out.println("빵 토핑을 추가하시겠습니까?");
-							System.out.println("[1]햄 [2]치즈 [3]야채 [4]소스 [5]추가안함");
-
-							int add = sc.nextInt();
-
-							if (add > 0 && add < 5) {
-								System.out.println("당신의 센스를 뽐내는 타임~~마");
-								System.out.println();
-								qdao.getQuiz(0);
-								System.out.println();
-								System.out.println("정답 입력 >> ");
-								String inputAnswer = sc.next();
-								qdao.isCorr(inputAnswer);
-
-
-							} else {
-								System.out.println("주문완료! 퍽퍽할걸~?");
-								System.out.println();
-								break;
-							}
-
 						}
 					} else { // 세트
 						System.out.println("세뚜세뚜를 즐기고 싶다면?");
@@ -296,10 +347,20 @@ public class Main {
 								System.out.println("정답 입력 >> ");
 								String inputAnswer = sc.next();
 								qdao.isCorr(inputAnswer);
+								if (qdao.isCorr(inputAnswer) == true) {
+									System.out.println("정답입니다!");
+									System.out.println("토핑 획득 성공!!");
+									System.out.println("아싸~ 10점 획득!!!");
+									score += 10;
+									System.out.println(img.img1(add - 1));
+								} else {
+									System.out.println("땡!!!!!!!!!");
+									System.out.println("다시 도전하세요!");
+								}
 
 							} else {
 								System.out.println("주문완료! 퍽퍽할걸~?");
-								System.out.println();
+								System.out.println("결제할 금액 : ");
 								break;
 							}
 
@@ -315,7 +376,7 @@ public class Main {
 				System.out.println("랭킹을 조회합니다.");
 				rank.rankView();
 				System.out.println();
-				
+
 			} else if (choice == 4) {
 				System.out.println("프로그램 종료");
 				break;
