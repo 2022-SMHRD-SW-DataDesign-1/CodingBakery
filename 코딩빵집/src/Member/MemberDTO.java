@@ -2,11 +2,9 @@ package Member;
 
 public class MemberDTO {
 
-	// 필드
 	private String name;
-	private int phone;
+	int phone;
 
-	// get, set 메소드
 	public String getName() {
 		return name;
 	}
@@ -15,25 +13,23 @@ public class MemberDTO {
 		this.name = name;
 	}
 
-	public int getNum() {
+	public int getPhone() {
 		return phone;
 	}
 
-	public void setNum(int phone) {
+	public void setPhone(int phone) {
 		this.phone = phone;
 	}
 
-	// 회원등록 메소드
-	public MemberDTO(String name, int num) {
+	public MemberDTO(String name, int phone) {
 		super();
 		this.name = name;
-		this.phone = num;
+		this.phone = phone;
 	}
 
-	// 로그인 메소드
-	public MemberDTO(int num) {
+	public MemberDTO(int phone) {
 		super();
-		this.phone = num;
+		this.phone = phone;
 	}
 
 }
