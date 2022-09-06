@@ -4,7 +4,7 @@ public class MemberDTO {
 
 	// 필드
 	private String name;
-	private int num;
+	private int phone;
 
 	// get, set 메소드
 	public String getName() {
@@ -16,24 +16,24 @@ public class MemberDTO {
 	}
 
 	public int getNum() {
-		return num;
+		return phone;
 	}
 
-	public void setNum(int num) {
-		this.num = num;
+	public void setNum(int phone) {
+		this.phone = phone;
 	}
 
 	// 회원등록 메소드
 	public MemberDTO(String name, int num) {
 		super();
 		this.name = name;
-		this.num = num;
+		this.phone = num;
 	}
 
 	// 로그인 메소드
 	public MemberDTO(int num) {
 		super();
-		this.num = num;
+		this.phone = num;
 	}
 
 }

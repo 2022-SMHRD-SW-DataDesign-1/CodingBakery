@@ -38,13 +38,13 @@ public class MemberDAO {
 
 		try {
 			String name = dto.getName();
-			int num = dto.getNum();
+			int phone = dto.getNum();
 
 			String sql = "insert into member values(?, ?)";
 			psmt = conn.prepareStatement(sql);
 
 			psmt.setString(1, name);
-			psmt.setInt(2, num);
+			psmt.setInt(2, phone);
 
 			cnt = psmt.executeUpdate();
 
