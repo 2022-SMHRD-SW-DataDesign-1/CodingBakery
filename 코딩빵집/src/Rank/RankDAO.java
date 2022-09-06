@@ -11,7 +11,9 @@ public class RankDAO {
 	PreparedStatement psmt = null;
 	ResultSet rs = null;
 
-	public int rankInsert(RankDTO rankdto) {
+	RankDTO rdto = null;
+	
+	public int rankInsert(int a, int b) {
 		int cnt = 0;
 
 		try {
@@ -31,12 +33,12 @@ public class RankDAO {
 		}
 
 		try {
-			int phone = rankdto.getPhone();
-			int score = rankdto.getScore();
+//			a = rdto.getPhone();
+//			b = rdto.getScore();
 			String sql = "insert into rank values(?,?)";
 			psmt = conn.prepareStatement(sql);
-			psmt.setInt(1, phone);
-			psmt.setInt(2, score);
+			psmt.setInt(1, a);
+			psmt.setInt(2, b);
 			cnt = psmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
