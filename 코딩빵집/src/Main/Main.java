@@ -42,6 +42,8 @@ public class Main {
 				int number = sc.nextInt();
 
 				lm.InsertCon(number, name);
+				System.out.println();
+
 				System.out.println("주문 하시겠습니까? ");
 				System.out.println("[1]매장식사 [2]포장");
 				int number2 = sc.nextInt();
@@ -67,14 +69,12 @@ public class Main {
 				}
 			} else if (choice == 2) {
 				System.out.print("이름 입력 : ");
-
-			} else if (choice == 2) {
-				System.out.print("이름 입력 : ");
 				String name = sc.next();
 				System.out.print("폰번호 입력 : ");
 				int number = sc.nextInt();
 
 				lm.LoginCon(number, name);
+				System.out.println();
 
 				System.out.println("주문 하시겠습니까? ");
 				System.out.println("[1]매장식사 [2]포장");
