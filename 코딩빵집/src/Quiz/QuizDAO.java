@@ -68,8 +68,19 @@ public class QuizDAO {
 	}
 
 	public boolean isCorr(String input) {
-		return input.equals(answer);
+		this.result = input.equals(answer);
+		return result;
+	}
 
+	public void result() {
+		if (result == true) {
+			System.out.println("¡§¥‰¿‘¥œ¥Ÿ!");
+			System.out.println("≈‰«Œ »πµÊ º∫∞¯!!");
+			System.out.println("æ∆ΩŒ~ 10¡° »πµÊ!!!");
+		}else {
+			System.out.println("∂Ø!!!!!!!!!");
+			System.out.println("¥ŸΩ√ µµ¿¸«œººø‰!");
+		}
 	}
 
 }
