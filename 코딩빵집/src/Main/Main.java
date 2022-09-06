@@ -55,7 +55,10 @@ public class Main {
 						// 빵 출력하기
 						System.out.println("당신의 센스를 뽐내는 타임~~마");
 					} else { // 세트
+						// 빵 출력하기
 						System.out.println("세뚜세뚜를 즐기고 싶다면?");
+						// 음료 출력하기
+						// 가격 출력하기
 					}
 				} else { // 포장
 					System.out.println("메뉴선택");
@@ -63,9 +66,13 @@ public class Main {
 					int menu = sc.nextInt();
 
 					if (menu == 1) { // 단품
+						// 빵 출력하기
 						System.out.println("당신의 센스를 뽐내는 타임~~마");
 					} else { // 세트
+						// 빵 출력하기
 						System.out.println("세뚜세뚜를 즐기고 싶다면?");
+						// 음료 출력하기
+						// 가격 출력하기
 					}
 				}
 			} else if (choice == 2) {
@@ -89,8 +96,12 @@ public class Main {
 					if (menu == 1) { // 단품
 						// 빵 출력하기
 						System.out.println("당신의 센스를 뽐내는 타임~~마");
+						// 가격 출력하기
 					} else { // 세트
+						// 빵 출력하기
 						System.out.println("세뚜세뚜를 즐기고 싶다면?");
+						// 음료 출력하기
+						// 가격 출력하기
 					}
 				} else { // 포장
 					System.out.println("메뉴선택");
@@ -98,9 +109,14 @@ public class Main {
 					int menu = sc.nextInt();
 
 					if (menu == 1) { // 단품
+						// 빵 출력하기
 						System.out.println("당신의 센스를 뽐내는 타임~~마");
+						// 가격 출력하기
 					} else { // 세트
+						// 빵 출력하기
 						System.out.println("세뚜세뚜를 즐기고 싶다면?");
+						// 음료 출력하기
+						// 가격 출력하기
 					}
 				}
 			} else if (choice == 3) {
