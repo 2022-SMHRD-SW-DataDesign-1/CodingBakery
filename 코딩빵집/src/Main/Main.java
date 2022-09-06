@@ -33,6 +33,8 @@ public class Main {
 
 		Scanner sc = new Scanner(System.in);
 		story title = new story();
+		
+		QuizDAO qdao = new QuizDAO();
 
 		int score = 0;
 
@@ -63,8 +65,24 @@ public class Main {
 
 					if (menu == 1) { // 단품
 						// 빵 출력하기
-						System.out.println("당신의 센스를 뽐내는 타임~~마");
-					} else { // 세트
+						
+						while(true) {
+						System.out.println("빵 토핑을 추가하시겠습니까?");
+						System.out.println("[1]햄 [2]치즈 [3]야채 [4]소스 [5]추가안함");
+					
+						int add = sc.nextInt();
+						if(add==1) {
+							System.out.println("당신의 센스를 뽐내는 타임~~마");
+							System.out.println();
+							int q=qdao.
+							String sql = "select quiz from quiz_list where qnum=q;";
+						}
+						
+					
+							
+
+					}
+					}else { // 세트
 						// 빵 출력하기
 						System.out.println("세뚜세뚜를 즐기고 싶다면?");
 						// 음료 출력하기
@@ -153,12 +171,6 @@ public class Main {
 		}
 		System.out.println("프로그램이 종료되었습니다.");
 		
-        System.out.println("빵 토핑을 추가하시겠습니까?");
-        System.out.println("[1]햄 [2]치즈 [3]야채 [4]소스 [5]추가안함");
-        
-        int add = sc.nextInt();
-        
-        if(add==1) {
         	
         }
 	}

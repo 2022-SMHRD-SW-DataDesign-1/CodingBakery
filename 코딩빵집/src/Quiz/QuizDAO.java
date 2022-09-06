@@ -51,7 +51,7 @@ public class QuizDAO {
 				this.ran = rs.getInt(1);
 			}
 
-			qnum = rd.nextInt(ran) + 1;
+			qnum = rd.nextInt(20) + 1;
 			this.sleq = qnum;
 			String sql = "select * from quiz_list where qnum = ?";
 			psmt = conn.prepareStatement(sql);
