@@ -7,9 +7,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class RankDAO {
-	Connection conn;
-	PreparedStatement psmt;
-	ResultSet rs;
+	Connection conn = null;
+	PreparedStatement psmt = null;
+	ResultSet rs = null;
+
 	public int rankInsert(RankDTO rankdto) {
 		int cnt = 0;
 

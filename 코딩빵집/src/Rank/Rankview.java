@@ -7,9 +7,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Rankview {
-	Connection conn;
-	PreparedStatement psmt;
-	ResultSet rs;
+	Connection conn = null;
+	PreparedStatement psmt = null;
+	ResultSet rs = null;
 
 	public void rankView() {
 		try {
@@ -32,8 +32,8 @@ public class Rankview {
 			rs = psmt.executeQuery();
 			System.out.print("-회원번호-\t-점수-\n");
 			while (rs.next()) {
-				System.out.print(rs.getString(1)+"\t\t");
-				System.out.println(rs.getString(2)+"\t");
+				System.out.print(rs.getString(1) + "\t\t");
+				System.out.println(rs.getString(2) + "\t");
 			}
 		} catch (SQLException e) {
 		} finally {
