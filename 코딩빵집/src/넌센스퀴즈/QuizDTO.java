@@ -12,7 +12,6 @@ public class QuizDTO {
 	public String getQuiz() {
 		return Quiz;
 	}
-
 	public String getAnswer() {
 		return answer;
 	}

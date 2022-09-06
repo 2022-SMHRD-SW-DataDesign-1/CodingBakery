@@ -34,7 +34,6 @@ public class QuizDAO {
 			e.printStackTrace();
 		}
 	}
-
 	public void getQuiz(int qnum) {
 		connect();
 
