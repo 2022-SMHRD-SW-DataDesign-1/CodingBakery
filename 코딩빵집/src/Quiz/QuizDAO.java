@@ -54,7 +54,7 @@ public class QuizDAO {
 			while (rs.next()) {
 				String quiz = rs.getString(2);
 				this.quiz = quiz;
-				String answer = rs.getString(2);
+				String answer = rs.getString(3);
 				this.answer = answer;
 
 				System.out.printf("%s", quiz);
