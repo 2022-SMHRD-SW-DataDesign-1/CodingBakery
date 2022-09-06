@@ -42,6 +42,7 @@ public class Main {
 		int cnt = 0;
 
 		title.title(); // 코딩빵집 타이틀 출력
+		img.Sand();
 
 		while (true) {
 			int score = 0;
