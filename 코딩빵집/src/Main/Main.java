@@ -10,7 +10,6 @@ import Rank.RankDAO;
 import Rank.RankDTO;
 import Rank.Rankview;
 
-import ³Í¼¾½ºÄûÁî.Quiz;
 
 import topping.image;
 import topping.story;
@@ -31,12 +30,16 @@ public class Main {
 		RankDAO rdao = new RankDAO();
 		RankDTO rdto;
 		Controller lm = new Controller();
-		image img = new image();
+		image img = new image; 
+		
 
 		Scanner sc = new Scanner(System.in);
 		story title = new story();
 
 		QuizDAO qdao = new QuizDAO();
+
+		
+		String[] imgArr = {img.getHaem(),img.getCheese(),img.getVegetable(),img.getSauce()};
 
 		int cnt = 0;
 
