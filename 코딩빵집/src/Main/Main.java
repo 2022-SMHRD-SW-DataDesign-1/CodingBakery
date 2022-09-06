@@ -10,7 +10,6 @@ import Rank.RankDAO;
 import Rank.RankDTO;
 import Rank.Rankview;
 
-import ³Í¼¾½ºÄûÁî.Quiz;
 
 import topping.image;
 import topping.story;
