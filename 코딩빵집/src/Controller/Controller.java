@@ -5,7 +5,7 @@ import Member.MemberDTO;
 
 public class Controller {
 
-	// Controller의 역할
+
 
 	MemberDAO dao = new MemberDAO();
 
@@ -33,5 +33,7 @@ public class Controller {
 			System.out.println("회원가입 실패");
 		}
 	}
+	
+	
 
 }

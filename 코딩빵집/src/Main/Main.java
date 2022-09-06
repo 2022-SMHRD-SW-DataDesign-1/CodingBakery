@@ -5,10 +5,10 @@ import java.util.Scanner;
 
 import Member.MemberDAO;
 import Member.MemberDTO;
+import Quiz.QuizDAO;
 import Rank.RankDAO;
 import Rank.Rankview;
-
-
+import 넌센스퀴즈.Quiz;
 import Controller.Controller;
 
 import 토핑.image;
@@ -88,6 +88,7 @@ public class Main {
 					int number3 = sc.nextInt();
 					if (number3 == 1) {
 						System.out.println("퀴즈를 통한 토핑추가");
+						
 					} else {
 						System.out.println("퀴즈를 통한 토핑추가");
 					}
