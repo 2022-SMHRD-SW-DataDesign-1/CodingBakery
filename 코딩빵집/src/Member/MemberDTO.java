@@ -9,16 +9,8 @@ public class MemberDTO {
 		return name;
 	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
-
 	public int getPhone() {
 		return phone;
-	}
-
-	public void setPhone(int phone) {
-		this.phone = phone;
 	}
 
 	public MemberDTO(int phone, String name) {

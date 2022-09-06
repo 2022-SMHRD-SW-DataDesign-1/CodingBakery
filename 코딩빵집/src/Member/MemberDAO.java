@@ -30,6 +30,7 @@ public class MemberDAO {
 			e.printStackTrace();
 		}
 	}
+	
 
 	public void getClose() {
 
@@ -104,92 +105,4 @@ public class MemberDAO {
 //	
 		return cnt; 
 	}
-
-	public int update(MemberDTO dto) {
-		int cnt = 0; 
-		connect();
-
-		try {
-			String name = dto.getName();
-			int phone = dto.getPhone();
-
-			String sql = "update member set phone = ? where name = ?";
-			psmt = conn.prepareStatement(sql);
-
-			psmt.setString(1, name);
-			psmt.setInt(2, phone);
-
-			cnt = psmt.executeUpdate();
-
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			getClose();
-		}
-		return cnt;
-	}
-
-	public void selestAll() {
-		connect();
-
-		try {
-			String sql = "select * from member";
-
-			psmt = conn.prepareStatement(sql);
-
-			rs = psmt.executeQuery();
-
-			System.out.println("NAME\tPHONE");
-			while (rs.next()) {
-				String name = rs.getString(1);
-				int phone = rs.getInt(2);
-
-				System.out.printf("%s\t%d\n", name, phone);
-			}
-
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-	}
-
-	public void select(String name) {
-		connect();
-
-		try {
-			String sql = "select * from member where name = ?";
-			psmt = conn.prepareStatement(sql);
-			psmt.setString(1, name);
-
-			rs = psmt.executeQuery();
-
-			System.out.println("NAME\tPHONE");
-			while (rs.next()) {
-				String name1 = rs.getString(1);
-				int phone = rs.getInt(2);
-
-				System.out.printf("%s\t%d\n", name1, phone);
-			}
-
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-
-	}
-
-	public int delete(String name) {
-		int cnt = 0;
-		connect();
-
-		try {
-			String sql = "delete from member where name = ?";
-			psmt = conn.prepareStatement(sql);
-			psmt.setString(1, name);
-
-			cnt = psmt.executeUpdate();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		return cnt;
-	}
-
 }
