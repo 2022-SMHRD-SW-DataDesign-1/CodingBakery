@@ -1,20 +1,56 @@
 package topping;
 
 public class image {
-	public static void main(String[] args) {
+	
 		
-		image img = new image();
 		
-		img.Cheese();
-		img.Vegetable();
-		img.Sauce();
-		img.Haem();
-		img.Bread();
-		img.BreadSet();
-		img.Coke();
+		
+	
+	
+	
+
+
+	public String getCoke() {
+		return Coke;
 	}
-	public void Coke() {
-		System.out.println("        @$##=~                 \r\n"
+
+
+	public String getBreadSet() {
+		return BreadSet;
+	}
+
+
+	public String getSand() {
+		return Sand;
+	}
+
+
+	public String getBread() {
+		return Bread;
+	}
+
+
+	public String getCheese() {
+		return Cheese;
+	}
+
+
+	public String getVegetable() {
+		return Vegetable;
+	}
+
+
+	public String getSauce() {
+		return Sauce;
+	}
+
+
+	public String getHaem() {
+		return Haem;
+	}
+
+
+	String Coke ="                  @$##=~                 \r\n"
 				+ "                !:$$#@@                 \r\n"
 				+ "                $:--;@@.                \r\n"
 				+ "                @~-~;~@~                \r\n"
@@ -63,10 +99,9 @@ public class image {
 				+ "             ~~. .,,,,,;@#              \r\n"
 				+ "               .#@=*$@@-                \r\n"
 				+ "                                        \r\n"
-				+ "                                                              ");
-	}
-	public void BreadSet() {
-		System.out.println("                                         \r\n"
+				+ "                                                              ";
+	
+	String BreadSet ="                                               \r\n"
 				+ "                   -, -                           \r\n"
 				+ "                    ~., -:                        \r\n"
 				+ "                    :   ,~                        \r\n"
@@ -98,10 +133,9 @@ public class image {
 				+ "      -;.-~.--,-.  -       ,..~.....-..    ,  $   \r\n"
 				+ "     -~.~~,-  :.    -~                            \r\n"
 				+ "     ,-      -       ,            ...~.~. -..-,,  \r\n"
-				+ "                                                                        ");
-	}
-		public void Sand() {
-			System.out.println("                                                   \r\n"
+				+ "                                                                        ";
+
+		String Sand ="                                                             \r\n"
 					+ "                         ,$;,                               \r\n"
 					+ "                        !-  .=~                             \r\n"
 					+ "                       ,-     .:!-                          \r\n"
@@ -135,10 +169,9 @@ public class image {
 					+ "                                                            \r\n"
 					+ "                                                            \r\n"
 					+ "                                                            \r\n"
-					+ "                                                                                               ");
-		}
-		public void Bread() {
-			System.out.println("                                                        .            \r\n"
+					+ "                                                                                               ";
+		
+	String Bread ="                                                        .                 \r\n"
 					+ "                      ..                               .              \r\n"
 					+ "                     ..                               .               \r\n"
 					+ "                    ..                                .               \r\n"
@@ -185,10 +218,9 @@ public class image {
 					+ "                   ,;-       .                                .       \r\n"
 					+ "                            .                                         \r\n"
 					+ "                           .                               ..         \r\n"
-					+ "                          .                                .                      ");
-		}
-		public void Cheese() {
-			System.out.println("                                                         \r\n"
+					+ "                          .                                .                      ";
+		
+		String Cheese ="                                                           \r\n"
 					+ "                                                            \r\n"
 					+ "                                        ,~                  \r\n"
 					+ "                                      ~*:.!,                \r\n"
@@ -224,11 +256,10 @@ public class image {
 					+ "                                     .~~~!;:~~.*            \r\n"
 					+ "                                             ~~-            \r\n"
 					+ "                                                            \r\n"
-					+ "                                                                                ");
-		}
+					+ "                                                                                ";
 		
-		public void Vegetable() {
-			System.out.println("                                -,                  \r\n"
+		
+		String Vegetable ="                                    -,                  \r\n"
 					+ "                                       ---.                 \r\n"
 					+ "                                 .,,, -----.                \r\n"
 					+ "                       ..        ------------,              \r\n"
@@ -268,11 +299,10 @@ public class image {
 					+ "               ...-,     .    ..                            \r\n"
 					+ "                ..                                          \r\n"
 					+ "                                                            \r\n"
-					+ "                                                            ");
-		}
+					+ "                                                            ";
 		
-		public void Sauce() {
-			System.out.println("                                       \r\n"
+		
+		String Sauce = "                                                 \r\n"
 					+ "                        .                         \r\n"
 					+ "                                                  \r\n"
 					+ "                                                  \r\n"
@@ -316,11 +346,10 @@ public class image {
 					+ "                   .........,,,                   \r\n"
 					+ "                    .... ...,,.                   \r\n"
 					+ "                      .....,                      \r\n"
-					+ "                                                                 ");
-		}
+					+ "                                                                 ";
 		
-		public void Haem() {
-			System.out.println("                                                   \r\n"
+		
+		String Haem ="                                                             \r\n"
 					+ "                          .        .                        \r\n"
 					+ "                          .        .                        \r\n"
 					+ "                                                            \r\n"
@@ -366,6 +395,6 @@ public class image {
 					+ "                                 -, .::-,                   \r\n"
 					+ "                                    ,=-*                    \r\n"
 					+ "                                                            \r\n"
-					+ "                                                                                    ");
-		}
+					+ "                                                                                    ;
+		
 }
