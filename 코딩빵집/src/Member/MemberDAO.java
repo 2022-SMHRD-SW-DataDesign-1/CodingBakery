@@ -54,7 +54,7 @@ public class MemberDAO {
 		connect();
 
 		try {
-			String sql = "select * From member where id = ? and pw = ?";
+			String sql = "select * From member where name = ? and phone = ?";
 			psmt = conn.prepareStatement(sql);
 
 			psmt.setString(1, name);
@@ -85,7 +85,7 @@ public class MemberDAO {
 			String name = dto.getName();
 			int phone = dto.getPhone();
 
-			String sql = "insert into member values(?, ?, ?, ?)";
+			String sql = "insert into member values(?, ?)";
 			psmt = conn.prepareStatement(sql);
 
 			psmt.setString(1, name);
@@ -110,7 +110,7 @@ public class MemberDAO {
 			String name = dto.getName();
 			int phone = dto.getPhone();
 
-			String sql = "update member set pw = ? where id = ?";
+			String sql = "update member set phone = ? where name = ?";
 			psmt = conn.prepareStatement(sql);
 
 			psmt.setString(1, name);
@@ -136,7 +136,6 @@ public class MemberDAO {
 
 			rs = psmt.executeQuery();
 
-			// rs의 커서를 기준으로 다음에 데이터가 있는지 없는지 확인
 			System.out.println("NAME\tPHONE");
 			while (rs.next()) {
 				String name = rs.getString(1);
@@ -154,13 +153,13 @@ public class MemberDAO {
 		connect();
 
 		try {
-			String sql = "select * from member where id = ?";
+			String sql = "select * from member where name = ?";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, name);
 
 			rs = psmt.executeQuery();
 
-			System.out.println("ID\tPW\tNAME\tAGE");
+			System.out.println("NAME\tPHONE");
 			while (rs.next()) {
 				String name1 = rs.getString(1);
 				int phone = rs.getInt(2);
