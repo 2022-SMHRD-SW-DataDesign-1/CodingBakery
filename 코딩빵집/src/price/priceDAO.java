@@ -33,7 +33,7 @@ public class priceDAO {
 		}
 	}
 
-	public void getPrice(int pnum) {
+	public int getPrice(int pnum) {
 		connect();
 		try {
 
@@ -46,12 +46,12 @@ public class priceDAO {
 			while (rs.next()) {
 				int price = rs.getInt(3);
 				this.price = price;
-
-				System.out.printf("%d", price);
+				
 			}
 
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		return price;
 	}
 }

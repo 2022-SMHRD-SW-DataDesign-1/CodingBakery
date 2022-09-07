@@ -9,6 +9,8 @@ import Quiz.QuizDAO;
 import Rank.RankDAO;
 import Rank.RankDTO;
 import Rank.Rankview;
+import price.priceDAO;
+import price.priceDTO;
 import topping.image;
 import topping.story;
 import Controller.Controller;
@@ -28,8 +30,11 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		story title = new story();
 		QuizDAO qdao = new QuizDAO();
-		int cnt = 0;
+		priceDAO pdao = new priceDAO();
 
+		int cnt = 0;
+		int sand = 5000;
+		int set = 7500;
 		int score = 0;
 		title.title();
 
@@ -75,6 +80,7 @@ public class Main {
 									System.out.println("아싸~ 10점 획득!!!");
 									score += 10;
 									System.out.println(img.img1(add - 1));
+									sand += pdao.getPrice(add);
 								} else {
 									System.out.println("땡!!!!!!!!!");
 									System.out.println("다시 도전하세요! 퍽퍽할걸~?");
@@ -82,7 +88,7 @@ public class Main {
 							} else {
 								System.out.println("주문완료! 맛있게드세여~~~");
 								System.out.println(img.img1(4));
-								System.out.println("결제할 금액 : , 총점은 " + score);
+								System.out.println("결제할 금액 :" + sand + "총점은 " + score);
 								break;
 							}
 						}
@@ -108,6 +114,7 @@ public class Main {
 									System.out.println("아싸~ 10점 획득!!!");
 									score += 10;
 									System.out.println(img.img1(add - 1));
+									set += pdao.getPrice(add);
 								} else {
 									System.out.println("땡!!!!!!!!!");
 									System.out.println("다시 도전하세요! 퍽퍽할걸~?");
@@ -115,7 +122,7 @@ public class Main {
 							} else {
 								System.out.println("주문완료! 맛있게드세여~~~");
 								System.out.println(img.img1(5));
-								System.out.println("결제할 금액 : ");
+								System.out.println("결제할 금액 :" + set + "총점은 " + score);
 								break;
 							}
 						}
@@ -145,6 +152,7 @@ public class Main {
 									System.out.println("아싸~ 10점 획득!!!");
 									score += 10;
 									System.out.println(img.img1(add - 1));
+									sand += pdao.getPrice(add);
 								} else {
 									System.out.println("땡!!!!!!!!!");
 									System.out.println("다시 도전하세요! 퍽퍽할걸~?");
@@ -152,7 +160,7 @@ public class Main {
 							} else {
 								System.out.println("주문완료! 맛있게드세여~~~");
 								System.out.println(img.img1(4));
-								System.out.println("결제할 금액 : ");
+								System.out.println("결제할 금액 :" + sand + "총점은 " + score);
 								break;
 							}
 						}
@@ -179,6 +187,7 @@ public class Main {
 									System.out.println("아싸~ 10점 획득!!!");
 									score += 10;
 									System.out.println(img.img1(add - 1));
+									set += pdao.getPrice(add);
 								} else {
 									System.out.println("땡!!!!!!!!!");
 									System.out.println("다시 도전하세요! 퍽퍽할걸~?");
@@ -186,7 +195,7 @@ public class Main {
 							} else {
 								System.out.println("주문완료! 맛있게드세여~~~");
 								System.out.println(img.img1(5));
-								System.out.println("결제할 금액 : ");
+								System.out.println("결제할 금액 :" + set + "총점은 " + score);
 								break;
 							}
 						}
@@ -228,6 +237,7 @@ public class Main {
 									System.out.println("아싸~ 10점 획득!!!");
 									score += 10;
 									System.out.println(img.img1(add - 1));
+									sand += pdao.getPrice(add);
 								} else {
 									System.out.println("땡!!!!!!!!!");
 									System.out.println("다시 도전하세요! 퍽퍽할걸~?");
@@ -235,7 +245,7 @@ public class Main {
 							} else {
 								System.out.println("주문완료! 맛있게드세여~~~");
 								System.out.println(img.img1(4));
-								System.out.println("결제할 금액 : ");
+								System.out.println("결제할 금액 :" + sand + "총점은 " + score);
 								break;
 							}
 						}
@@ -261,6 +271,7 @@ public class Main {
 									System.out.println("아싸~ 10점 획득!!!");
 									score += 10;
 									System.out.println(img.img1(add - 1));
+									set += pdao.getPrice(add);
 								} else {
 									System.out.println("땡!!!!!!!!!");
 									System.out.println("다시 도전하세요! 퍽퍽할걸~?");
@@ -268,7 +279,7 @@ public class Main {
 							} else {
 								System.out.println("주문완료! 맛있게드세여~~~");
 								System.out.println(img.img1(5));
-								System.out.println("결제할 금액 : ");
+								System.out.println("결제할 금액 :" + set + "총점은 " + score);
 								break;
 							}
 						}
@@ -297,6 +308,7 @@ public class Main {
 									System.out.println("아싸~ 10점 획득!!!");
 									score += 10;
 									System.out.println(img.img1(add - 1));
+									sand += pdao.getPrice(add);
 								} else {
 									System.out.println("땡!!!!!!!!!");
 									System.out.println("다시 도전하세요! 퍽퍽할걸~?");
@@ -304,7 +316,7 @@ public class Main {
 							} else {
 								System.out.println("주문완료! 맛있게드세여~~~");
 								System.out.println(img.img1(4));
-								System.out.println("결제할 금액 : ");
+								System.out.println("결제할 금액 :" + sand + "총점은 " + score);
 								break;
 							}
 						}
@@ -330,6 +342,7 @@ public class Main {
 									System.out.println("아싸~ 10점 획득!!!");
 									score += 10;
 									System.out.println(img.img1(add - 1));
+									set += pdao.getPrice(add);
 								} else {
 									System.out.println("땡!!!!!!!!!");
 									System.out.println("다시 도전하세요! 퍽퍽할걸~?");
@@ -337,7 +350,7 @@ public class Main {
 							} else {
 								System.out.println("주문완료! 맛있게드세여~~~");
 								System.out.println(img.img1(5));
-								System.out.println("결제할 금액 : ");
+								System.out.println("결제할 금액 :" + set + "총점은 " + score);
 								break;
 							}
 						}
