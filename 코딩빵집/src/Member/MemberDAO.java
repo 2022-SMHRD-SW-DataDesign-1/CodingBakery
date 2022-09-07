@@ -99,7 +99,7 @@ public class MemberDAO {
 
 		} catch (SQLException e) {
 		
-			e.printStackTrace();
+			System.out.println("이미 등록된 번호입니다. 다른 번호를 등록을 해주세요.");
 		}
 
 //	
