@@ -1,5 +1,8 @@
 package Title;
 
+
 public class title {
-	만들어주세여~
+	public static void main(String[] args) {
+		System.out.println("완성시켜주세여~");
+	}
 }
