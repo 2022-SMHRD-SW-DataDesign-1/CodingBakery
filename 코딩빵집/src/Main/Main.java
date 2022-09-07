@@ -91,13 +91,13 @@ public class Main {
 								} else {
 									System.out.println("주문완료! 맛있게드세여~~~");
 									System.out.println(img.img1(4));
-									System.out.println("결제할 금액 :" + sand + "총점은 " + score);
+									System.out.println("결제할 금액은? :" + sand + "입니다");
+									System.out.println("당신의 총점은! " + score + "점!!! 대단한뒈~? ");
 									break;
 								}
 							}
 						} else { // 세트
 							System.out.println("세뚜세뚜를 즐기고 싶다면?");
-							System.out.println(img.img1(6));
 							System.out.println(img.img1(7));
 							while (true) {
 								System.out.println("빵 토핑을 추가하시겠습니까?");
@@ -126,7 +126,8 @@ public class Main {
 								} else {
 									System.out.println("주문완료! 맛있게드세여~~~");
 									System.out.println(img.img1(5));
-									System.out.println("결제할 금액 :" + set + "총점은 " + score);
+									System.out.println("결제할 금액은? :" + set + "입니다");
+									System.out.println("당신의 총점은! " + score + "점!!! 대단한뒈~? ");
 									break;
 								}
 							}
@@ -165,13 +166,13 @@ public class Main {
 								} else {
 									System.out.println("주문완료! 맛있게드세여~~~");
 									System.out.println(img.img1(4));
-									System.out.println("결제할 금액 :" + sand + "총점은 " + score);
+									System.out.println("결제할 금액은? :" + sand + "입니다");
+									System.out.println("당신의 총점은! " + score + "점!!! 대단한뒈~? ");
 									break;
 								}
 							}
 						} else { // 세트
 							System.out.println("세뚜세뚜를 즐기고 싶다면?");
-							System.out.println(img.img1(6));
 							System.out.println(img.img1(7));
 							while (true) {
 								System.out.println("빵 토핑을 추가하시겠습니까?");
@@ -201,7 +202,8 @@ public class Main {
 								} else {
 									System.out.println("주문완료! 맛있게드세여~~~");
 									System.out.println(img.img1(5));
-									System.out.println("결제할 금액 :" + set + "총점은 " + score);
+									System.out.println("결제할 금액은? :" + set + "입니다");
+									System.out.println("당신의 총점은! " + score + "점!!! 대단한뒈~? ");
 									break;
 								}
 							}
@@ -254,13 +256,13 @@ public class Main {
 								} else {
 									System.out.println("주문완료! 맛있게드세여~~~");
 									System.out.println(img.img1(4));
-									System.out.println("결제할 금액 :" + sand + "총점은 " + score);
+									System.out.println("결제할 금액은? :" + sand + "입니다");
+									System.out.println("당신의 총점은! " + score + "점!!! 대단한뒈~? ");
 									break;
 								}
 							}
 						} else { // 세트
 							System.out.println("세뚜세뚜를 즐기고 싶다면?");
-							System.out.println(img.img1(6));
 							System.out.println(img.img1(7));
 							while (true) {
 								System.out.println("빵 토핑을 추가하시겠습니까?");
@@ -289,7 +291,8 @@ public class Main {
 								} else {
 									System.out.println("주문완료! 맛있게드세여~~~");
 									System.out.println(img.img1(5));
-									System.out.println("결제할 금액 :" + set + "총점은 " + score);
+									System.out.println("결제할 금액은? :" + set + "입니다");
+									System.out.println("당신의 총점은! " + score + "점!!! 대단한뒈~? ");
 									break;
 								}
 							}
@@ -327,13 +330,13 @@ public class Main {
 								} else {
 									System.out.println("주문완료! 맛있게드세여~~~");
 									System.out.println(img.img1(4));
-									System.out.println("결제할 금액 :" + sand + "총점은 " + score);
+									System.out.println("결제할 금액은? :" + sand + "입니다");
+									System.out.println("당신의 총점은! " + score + "점!!! 대단한뒈~? ");
 									break;
 								}
 							}
 						} else { // 세트
 							System.out.println("세뚜세뚜를 즐기고 싶다면?");
-							System.out.println(img.img1(6));
 							System.out.println(img.img1(7));
 							while (true) {
 								System.out.println("빵 토핑을 추가하시겠습니까?");
@@ -362,7 +365,8 @@ public class Main {
 								} else {
 									System.out.println("주문완료! 맛있게드세여~~~");
 									System.out.println(img.img1(5));
-									System.out.println("결제할 금액 :" + set + "총점은 " + score);
+									System.out.println("결제할 금액은? :" + set + "입니다");
+									System.out.println("당신의 총점은! " + score + "점!!! 대단한뒈~? ");
 									break;
 								}
 							}
