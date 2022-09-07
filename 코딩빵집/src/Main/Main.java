@@ -26,6 +26,8 @@ public class Main {
 		RankDAO rdao = new RankDAO();
 		RankDTO rdto;
 		Controller lm = new Controller();
+		
+		
 		image img = new image();
 		Scanner sc = new Scanner(System.in);
 		story title = new story();
@@ -80,6 +82,7 @@ public class Main {
 									System.out.println("아싸~ 10점 획득!!!");
 									score += 10;
 									sand += pdao.getPrice(add);
+									rdao.rankInsert(phone, score);
 									System.out.println(img.img1(add - 1));
 								} else {
 									System.out.println("땡!!!!!!!!!");
@@ -114,6 +117,7 @@ public class Main {
 									System.out.println("아싸~ 10점 획득!!!");
 									score += 10;
 									set += pdao.getPrice(add);
+									rdao.rankInsert(phone, score);
 									System.out.println(img.img1(add - 1));
 								} else {
 									System.out.println("땡!!!!!!!!!");
@@ -152,6 +156,7 @@ public class Main {
 									System.out.println("아싸~ 10점 획득!!!");
 									score += 10;
 									sand += pdao.getPrice(add);
+									rdao.rankInsert(phone, score);
 									System.out.println(img.img1(add - 1));
 								} else {
 									System.out.println("땡!!!!!!!!!");
@@ -187,6 +192,7 @@ public class Main {
 									System.out.println("아싸~ 10점 획득!!!");
 									score += 10;
 									set += pdao.getPrice(add);
+									rdao.rankInsert(phone, score);
 									System.out.println(img.img1(add - 1));
 								} else {
 									System.out.println("땡!!!!!!!!!");
@@ -237,6 +243,7 @@ public class Main {
 									System.out.println("아싸~ 10점 획득!!!");
 									score += 10;
 									sand += pdao.getPrice(add);
+									rdao.rankInsert(phone, score);
 									System.out.println(img.img1(add - 1));
 								} else {
 									System.out.println("땡!!!!!!!!!");
@@ -271,6 +278,7 @@ public class Main {
 									System.out.println("아싸~ 10점 획득!!!");
 									score += 10;
 									set += pdao.getPrice(add);
+									rdao.rankInsert(phone, score);
 									System.out.println(img.img1(add - 1));
 								} else {
 									System.out.println("땡!!!!!!!!!");
@@ -308,6 +316,7 @@ public class Main {
 									System.out.println("아싸~ 10점 획득!!!");
 									score += 10;
 									sand += pdao.getPrice(add);
+									rdao.rankInsert(phone, score);
 									System.out.println(img.img1(add - 1));
 								} else {
 									System.out.println("땡!!!!!!!!!");
@@ -342,6 +351,7 @@ public class Main {
 									System.out.println("아싸~ 10점 획득!!!");
 									score += 10;
 									set += pdao.getPrice(add);
+									rdao.rankInsert(phone, score);
 									System.out.println(img.img1(add - 1));
 								} else {
 									System.out.println("땡!!!!!!!!!");
