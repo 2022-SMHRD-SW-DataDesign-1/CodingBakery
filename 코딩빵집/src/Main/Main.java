@@ -9,6 +9,7 @@ import Quiz.QuizDAO;
 import Rank.RankDAO;
 import Rank.RankDTO;
 import Rank.Rankview;
+import Title.bingo;
 import Title.title;
 
 public class Main {
@@ -22,6 +23,7 @@ public class Main {
 		RankDTO rdto;
 		Controller lm = new Controller();
 		title story = new title();
+		bingo pan = new bingo();
 		QuizDAO qdao = new QuizDAO();
 
 		Scanner sc = new Scanner(System.in);
@@ -55,8 +57,6 @@ public class Main {
 
 						if (quiz == 1) { // 넌센스
 							System.out.println("당신의 센스를 뽐내는 타임~~마!");
-							// 넌센스 빙고판 출력
-
 							while (true) {
 								System.out.println("골라골라~~~?");
 								int num = sc.nextInt();
@@ -163,7 +163,7 @@ public class Main {
 
 						if (quiz == 1) { // 넌센스
 							System.out.println("당신의 센스를 뽐내는 타임~~마!");
-							// 넌센스 빙고판 출력
+							pan.bingopan();
 							while (true) {
 								System.out.println("골라골라~~~?");
 								int num = sc.nextInt();
