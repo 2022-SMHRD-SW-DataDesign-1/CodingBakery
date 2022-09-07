@@ -316,7 +316,7 @@ public class image {
 			+ "               .#@=*$@@-                \r\n" + "                                        \r\n"
 			+ "                                                              ";
 
-	String[] image = { Haem, Cheese, Vegetable, Sauce, Sand, BreadSet, Bread };
+	String[] image = { Haem, Cheese, Vegetable, Sauce, Sand, BreadSet, Bread, Coke };
 
 	public String img1(int num) {
 		return image[num];
