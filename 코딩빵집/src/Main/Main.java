@@ -87,6 +87,7 @@ public class Main {
 									System.out.println("ÅäÇÎ È¹µæ ¼º°ø!!");
 									System.out.println("¾Æ½Î~ 10Á¡ È¹µæ!!!");
 									score += 10;
+									rdao.rankInsert(phone, score);
 									System.out.println(img.img1(add - 1));
 								} else {
 									System.out.println("¶¯!!!!!!!!!");
@@ -122,6 +123,7 @@ public class Main {
 									System.out.println("ÅäÇÎ È¹µæ ¼º°ø!!");
 									System.out.println("¾Æ½Î~ 10Á¡ È¹µæ!!!");
 									score += 10;
+									rdao.rankInsert(phone, score);
 									System.out.println(img.img1(add - 1));
 								} else {
 									System.out.println("¶¯!!!!!!!!!");
@@ -160,6 +162,7 @@ public class Main {
 									System.out.println("ÅäÇÎ È¹µæ ¼º°ø!!");
 									System.out.println("¾Æ½Î~ 10Á¡ È¹µæ!!!");
 									score += 10;
+									rdao.rankInsert(phone, score);
 									System.out.println(img.img1(add - 1));
 								} else {
 									System.out.println("¶¯!!!!!!!!!");
@@ -195,6 +198,7 @@ public class Main {
 									System.out.println("ÅäÇÎ È¹µæ ¼º°ø!!");
 									System.out.println("¾Æ½Î~ 10Á¡ È¹µæ!!!");
 									score += 10;
+									rdao.rankInsert(phone, score);
 									System.out.println(img.img1(add - 1));
 								} else {
 									System.out.println("¶¯!!!!!!!!!");
@@ -249,6 +253,7 @@ public class Main {
 									System.out.println("ÅäÇÎ È¹µæ ¼º°ø!!");
 									System.out.println("¾Æ½Î~ 10Á¡ È¹µæ!!!");
 									score += 10;
+									rdao.rankInsert(phone, score);
 									System.out.println(img.img1(add - 1));
 								} else {
 									System.out.println("¶¯!!!!!!!!!");
@@ -284,6 +289,7 @@ public class Main {
 									System.out.println("ÅäÇÎ È¹µæ ¼º°ø!!");
 									System.out.println("¾Æ½Î~ 10Á¡ È¹µæ!!!");
 									score += 10;
+									rdao.rankInsert(phone, score);
 									System.out.println(img.img1(add - 1));
 								} else {
 									System.out.println("¶¯!!!!!!!!!");
@@ -322,6 +328,7 @@ public class Main {
 									System.out.println("ÅäÇÎ È¹µæ ¼º°ø!!");
 									System.out.println("¾Æ½Î~ 10Á¡ È¹µæ!!!");
 									score += 10;
+									rdao.rankInsert(phone, score);
 									System.out.println(img.img1(add - 1));
 								} else {
 									System.out.println("¶¯!!!!!!!!!");
@@ -356,6 +363,7 @@ public class Main {
 									System.out.println("ÅäÇÎ È¹µæ ¼º°ø!!");
 									System.out.println("¾Æ½Î~ 10Á¡ È¹µæ!!!");
 									score += 10;
+									rdao.rankInsert(phone, score);
 									System.out.println(img.img1(add - 1));
 								} else {
 									System.out.println("¶¯!!!!!!!!!");

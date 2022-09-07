@@ -29,7 +29,7 @@ public class Rankview {
 			e.printStackTrace();
 		}
 
-		String sql = "select * from (select * from rank order by score desc) where rownum<=10";
+		String sql = "select distinct phone, sum(score) from (select * from rank order by score desc) where rownum<=10 group by phone";
 
 		try {
 			psmt = conn.prepareStatement(sql);
