@@ -302,9 +302,12 @@ public class Main {
 					System.out.println("랭킹을 조회합니다.");
 					rank.rankView();
 					System.out.println();
-				} else {
-					System.out.println("잘못 눌렀습니다.");
+				} else if(choice ==4) {
+					System.out.println("게임 종료.");
 					System.out.println();
+					break;
+				}else {
+					System.out.println("잘못 입력하셨습니다.");
 				}
 			} else {
 				System.out.println("게임 종료");
