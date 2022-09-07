@@ -79,8 +79,8 @@ public class Main {
 									System.out.println("토핑 획득 성공!!");
 									System.out.println("아싸~ 10점 획득!!!");
 									score += 10;
-									System.out.println(img.img1(add - 1));
 									sand += pdao.getPrice(add);
+									System.out.println(img.img1(add - 1));
 								} else {
 									System.out.println("땡!!!!!!!!!");
 									System.out.println("다시 도전하세요! 퍽퍽할걸~?");
@@ -113,8 +113,8 @@ public class Main {
 									System.out.println("토핑 획득 성공!!");
 									System.out.println("아싸~ 10점 획득!!!");
 									score += 10;
-									System.out.println(img.img1(add - 1));
 									set += pdao.getPrice(add);
+									System.out.println(img.img1(add - 1));
 								} else {
 									System.out.println("땡!!!!!!!!!");
 									System.out.println("다시 도전하세요! 퍽퍽할걸~?");
@@ -151,8 +151,8 @@ public class Main {
 									System.out.println("토핑 획득 성공!!");
 									System.out.println("아싸~ 10점 획득!!!");
 									score += 10;
-									System.out.println(img.img1(add - 1));
 									sand += pdao.getPrice(add);
+									System.out.println(img.img1(add - 1));
 								} else {
 									System.out.println("땡!!!!!!!!!");
 									System.out.println("다시 도전하세요! 퍽퍽할걸~?");
@@ -186,8 +186,8 @@ public class Main {
 									System.out.println("토핑 획득 성공!!");
 									System.out.println("아싸~ 10점 획득!!!");
 									score += 10;
-									System.out.println(img.img1(add - 1));
 									set += pdao.getPrice(add);
+									System.out.println(img.img1(add - 1));
 								} else {
 									System.out.println("땡!!!!!!!!!");
 									System.out.println("다시 도전하세요! 퍽퍽할걸~?");
@@ -236,8 +236,8 @@ public class Main {
 									System.out.println("토핑 획득 성공!!");
 									System.out.println("아싸~ 10점 획득!!!");
 									score += 10;
-									System.out.println(img.img1(add - 1));
 									sand += pdao.getPrice(add);
+									System.out.println(img.img1(add - 1));
 								} else {
 									System.out.println("땡!!!!!!!!!");
 									System.out.println("다시 도전하세요! 퍽퍽할걸~?");
@@ -270,8 +270,8 @@ public class Main {
 									System.out.println("토핑 획득 성공!!");
 									System.out.println("아싸~ 10점 획득!!!");
 									score += 10;
-									System.out.println(img.img1(add - 1));
 									set += pdao.getPrice(add);
+									System.out.println(img.img1(add - 1));
 								} else {
 									System.out.println("땡!!!!!!!!!");
 									System.out.println("다시 도전하세요! 퍽퍽할걸~?");
@@ -307,8 +307,8 @@ public class Main {
 									System.out.println("토핑 획득 성공!!");
 									System.out.println("아싸~ 10점 획득!!!");
 									score += 10;
-									System.out.println(img.img1(add - 1));
 									sand += pdao.getPrice(add);
+									System.out.println(img.img1(add - 1));
 								} else {
 									System.out.println("땡!!!!!!!!!");
 									System.out.println("다시 도전하세요! 퍽퍽할걸~?");
@@ -341,8 +341,8 @@ public class Main {
 									System.out.println("토핑 획득 성공!!");
 									System.out.println("아싸~ 10점 획득!!!");
 									score += 10;
-									System.out.println(img.img1(add - 1));
 									set += pdao.getPrice(add);
+									System.out.println(img.img1(add - 1));
 								} else {
 									System.out.println("땡!!!!!!!!!");
 									System.out.println("다시 도전하세요! 퍽퍽할걸~?");
