@@ -25,244 +25,248 @@ public class Main {
 		QuizDAO qdao = new QuizDAO();
 
 		Scanner sc = new Scanner(System.in);
+		story.title1();
+		System.out.println();
 
+		System.out.println();
+		System.out.println("ê²Œì„ì„ ì‹œì‘í•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
+		System.out.print("[1]ì‹œì‘ [2]ì¢…ë£Œ : ");
+		int game = sc.nextInt();
+		System.out.println();
 		while (true) {
 
-			System.out.println("°ÔÀÓÀ» ½ÃÀÛÇÏ½Ã°Ú½À´Ï±î?");
-			System.out.print("[1]½ÃÀÛ [2]Á¾·á :\t");
-			int game = sc.nextInt();
-
-			if (game == 1) { // °ÔÀÓ½ÃÀÛ
-				// title()
-				System.out.println("¼±ÅÃÇÏ½Ã¿À");
-				System.out.print("[1]È¸¿øµî·Ï [2]·Î±×ÀÎ [3]·©Å·Á¶È¸ :\t");
+			if (game == 1) { // ê²Œì„ì‹œì‘
+				System.out.println("ì„ íƒí•˜ì‹œì˜¤");
+				System.out.print("[1]íšŒì›ë“±ë¡ [2]ë¡œê·¸ì¸ [3]ë­í‚¹ì¡°íšŒ : ");
 				int choice = sc.nextInt();
 
-				if (choice == 1) { // È¸¿øµî·Ï
-					System.out.print("ÀÌ¸§ ÀÔ·Â : ");
+				if (choice == 1) { // íšŒì›ë“±ë¡
+					System.out.print("ì´ë¦„ ì…ë ¥ : ");
 					String name = sc.next();
-					System.out.print("Æù¹øÈ£ ÀÔ·Â : ");
+					System.out.print("í°ë²ˆí˜¸ ì…ë ¥ : ");
 					int phone = sc.nextInt();
 					int Join = lm.InsertCon(phone, name);
 
 					if (Join > 0) {
 						System.out.println();
-						System.out.println("4°¡Áö ÄûÁî Áß ÇÏ³ª¸¦ Ç®¾î ºÁºÁºÁºÁ");
-						System.out.print("[1]³Í¼¾½º [2]»çÀÚ¼º¾î [3]ÃÊ¼ºÄûÁî [4]¿µ¾î´Ü¾î : \t");
+						System.out.println("4ê°€ì§€ í€´ì¦ˆ ì¤‘ í•˜ë‚˜ë¥¼ í’€ì–´ ë´ë´ë´ë´");
+						System.out.print("[1]ë„Œì„¼ìŠ¤ [2]ì‚¬ìì„±ì–´ [3]ì´ˆì„±í€´ì¦ˆ [4]ì˜ì–´ë‹¨ì–´ : ");
 						int quiz = sc.nextInt();
 
-						if (quiz == 1) { // ³Í¼¾½º
-							System.out.println("´ç½ÅÀÇ ¼¾½º¸¦ »Ë³»´Â Å¸ÀÓ~~¸¶!");
-							// ³Í¼¾½º ºù°íÆÇ Ãâ·Â
+						if (quiz == 1) { // ë„Œì„¼ìŠ¤
+							System.out.println("ë‹¹ì‹ ì˜ ì„¼ìŠ¤ë¥¼ ë½ë‚´ëŠ” íƒ€ì„~~ë§ˆ!");
+							// ë„Œì„¼ìŠ¤ ë¹™ê³ íŒ ì¶œë ¥
 
 							while (true) {
-								System.out.println("¸î¹øÀ» Çª½Ã°Ú½À´Ï±î?");
+								System.out.println("ê³¨ë¼ê³¨ë¼~~~?");
 								int num = sc.nextInt();
-								// ¸Â´Â Å×ÀÌºí °¡Á®¿À±â
-								// ¹®Á¦ Ãâ·Â
+								// ë§ëŠ” í…Œì´ë¸” ê°€ì ¸ì˜¤ê¸°
+								// ë¬¸ì œ ì¶œë ¥
 								System.out.println();
-								System.out.println("Á¤´ä ÀÔ·Â >> ");
+								System.out.println("ì •ë‹µ ì…ë ¥ >> ");
 								String inputAnswer = sc.next();
 								qdao.isCorr(inputAnswer);
 								if (qdao.isCorr(inputAnswer) == true) {
-									System.out.println("Á¤´äÀÔ´Ï´Ù!");
+									System.out.println("ì •ë‹µì…ë‹ˆë‹¤!");
 								} else {
-									System.out.println("¶¯!!!!!!!");
+									System.out.println("ë•¡!!!!!!!");
 								}
-								// ºù°íÀÇ °¹¼ö°¡ 3°³°¡ µÇ¸é Á¾·á
-								
+								// ë¹™ê³ ì˜ ê°¯ìˆ˜ê°€ 3ê°œê°€ ë˜ë©´ ì¢…ë£Œ
 								break;
 							}
 
-						} // ³Í¼¾½º Á¾·á
-						else if (quiz == 2) { // »çÀÚ¼º¾î
-							System.out.println("´ç½ÅÀÇ Áö½ÄÀ» »Ë³»´Â Å¸ÀÓ~~¸¶! ");
-							// »çÀÚ¼º¾î ºù°íÆÇ Ãâ·Â
+						} // ë„Œì„¼ìŠ¤ ì¢…ë£Œ
+						else if (quiz == 2) { // ì‚¬ìì„±ì–´
+							System.out.println("ë‹¹ì‹ ì˜ ì§€ì‹ì„ ë½ë‚´ëŠ” íƒ€ì„~~ë§ˆ! ");
+							// ì‚¬ìì„±ì–´ ë¹™ê³ íŒ ì¶œë ¥
 							while (true) {
-								System.out.println("¸î¹øÀ» Çª½Ã°Ú½À´Ï±î?");
+								System.out.println("ê³¨ë¼ê³¨ë¼~~~?");
 								int num = sc.nextInt();
-								// ¸Â´Â Å×ÀÌºí °¡Á®¿À±â
-								// ¹®Á¦ Ãâ·Â
+								// ë§ëŠ” í…Œì´ë¸” ê°€ì ¸ì˜¤ê¸°
+								// ë¬¸ì œ ì¶œë ¥
 								System.out.println();
-								System.out.println("Á¤´ä ÀÔ·Â >> ");
+								System.out.println("ì •ë‹µ ì…ë ¥ >> ");
 								String inputAnswer = sc.next();
 								qdao.isCorr(inputAnswer);
 								if (qdao.isCorr(inputAnswer) == true) {
-									System.out.println("Á¤´äÀÔ´Ï´Ù!");
+									System.out.println("ì •ë‹µì…ë‹ˆë‹¤!");
 								} else {
-									System.out.println("¶¯!!!!!!!");
+									System.out.println("ë•¡!!!!!!!");
 								}
-								// ºù°íÀÇ °¹¼ö°¡ 3°³°¡ µÇ¸é Á¾·á
+								// ë¹™ê³ ì˜ ê°¯ìˆ˜ê°€ 3ê°œê°€ ë˜ë©´ ì¢…ë£Œ
 								break;
 							}
 
-						} // »çÀÚ¼º¾î Á¾·á
+						} // ì‚¬ìì„±ì–´ ì¢…ë£Œ
 
-						else if (quiz == 3) { // ÃÊ¼ºÄûÁî
-							System.out.println("ÄÄÇ»ÅÍÀÇ ¸¶À½À» ÀĞ´Â Å¸ÀÓ~~¸¶!");
-							// ÃÊ¼ºÄûÁî ºù°íÆÇ Ãâ·Â
+						else if (quiz == 3) { // ì´ˆì„±í€´ì¦ˆ
+							System.out.println("ì»´í“¨í„°ì˜ ë§ˆìŒì„ ì½ëŠ” íƒ€ì„~~ë§ˆ!");
+							// ì´ˆì„±í€´ì¦ˆ ë¹™ê³ íŒ ì¶œë ¥
 							while (true) {
-								System.out.println("¸î¹øÀ» Çª½Ã°Ú½À´Ï±î?");
+								System.out.println("ê³¨ë¼ê³¨ë¼~~~?");
 								int num = sc.nextInt();
-								// ¸Â´Â Å×ÀÌºí °¡Á®¿À±â
-								// ¹®Á¦ Ãâ·Â
+								// ë§ëŠ” í…Œì´ë¸” ê°€ì ¸ì˜¤ê¸°
+								// ë¬¸ì œ ì¶œë ¥
 								System.out.println();
-								System.out.println("Á¤´ä ÀÔ·Â >> ");
+								System.out.println("ì •ë‹µ ì…ë ¥ >> ");
 								String inputAnswer = sc.next();
 								qdao.isCorr(inputAnswer);
 								if (qdao.isCorr(inputAnswer) == true) {
-									System.out.println("Á¤´äÀÔ´Ï´Ù!");
+									System.out.println("ì •ë‹µì…ë‹ˆë‹¤!");
 								} else {
-									System.out.println("¶¯!!!!!!!");
+									System.out.println("ë•¡!!!!!!!");
 								}
-								// ºù°íÀÇ °¹¼ö°¡ 3°³°¡ µÇ¸é Á¾·á
+								// ë¹™ê³ ì˜ ê°¯ìˆ˜ê°€ 3ê°œê°€ ë˜ë©´ ì¢…ë£Œ
 								break;
 							}
 
-						} // ÃÊ¼ºÄûÁî Á¾·á
+						} // ì´ˆì„±í€´ì¦ˆ ì¢…ë£Œ
 
-						else if (quiz == 4) { // ¿µ¾îÄûÁî
-							System.out.println("À¯Ä¡¿ø»ıµµ Ç®¼öÀÖ´Ù´Â ¿µ´Ü¾îÇ®±â Å¸ÀÓ~~¸¶!");
+						else if (quiz == 4) { // ì˜ì–´í€´ì¦ˆ
+							System.out.println("ìœ ì¹˜ì›ìƒë„ í’€ìˆ˜ìˆë‹¤ëŠ” ì˜ë‹¨ì–´í’€ê¸° íƒ€ì„~~ë§ˆ!");
 							while (true) {
-								System.out.println("¸î¹øÀ» Çª½Ã°Ú½À´Ï±î?");
+								System.out.println("ê³¨ë¼ê³¨ë¼~~~?");
 								int num = sc.nextInt();
-								// ¸Â´Â Å×ÀÌºí °¡Á®¿À±â
-								// ¹®Á¦ Ãâ·Â
+								// ë§ëŠ” í…Œì´ë¸” ê°€ì ¸ì˜¤ê¸°
+								// ë¬¸ì œ ì¶œë ¥
 								System.out.println();
-								System.out.println("Á¤´ä ÀÔ·Â >> ");
+								System.out.println("ì •ë‹µ ì…ë ¥ >> ");
 								String inputAnswer = sc.next();
 								qdao.isCorr(inputAnswer);
 								if (qdao.isCorr(inputAnswer) == true) {
-									System.out.println("Á¤´äÀÔ´Ï´Ù!");
+									System.out.println("ì •ë‹µì…ë‹ˆë‹¤!");
 								} else {
-									System.out.println("¶¯!!!!!!!");
+									System.out.println("ë•¡!!!!!!!");
 								}
-								// ºù°íÀÇ °¹¼ö°¡ 3°³°¡ µÇ¸é Á¾·á
+								// ë¹™ê³ ì˜ ê°¯ìˆ˜ê°€ 3ê°œê°€ ë˜ë©´ ì¢…ë£Œ
 								break;
 							}
 
-						} // ¿µ¾îÄûÁî Á¾·á
+						} // ì˜ì–´í€´ì¦ˆ ì¢…ë£Œ
 
-						else { // Àß¸ø´©¸£¸é
-							System.out.println("´Ù½Ã ¼±ÅÃÇÏ¼¼¿ä!!!");
-						} 
+						else { // ì˜ëª»ëˆ„ë¥´ë©´
+							System.out.println("ë‹¤ì‹œ ì„ íƒí•˜ì„¸ìš”!!!");
+
+						} // ì¢…ë£Œ
 					}
 				} else if (choice == 2) {
-					System.out.print("ÀÌ¸§ ÀÔ·Â : ");
+					System.out.print("ì´ë¦„ ì…ë ¥ : ");
 					String name = sc.next();
-					System.out.print("Æù¹øÈ£ ÀÔ·Â : ");
+					System.out.print("í°ë²ˆí˜¸ ì…ë ¥ : ");
 					int phone = sc.nextInt();
 					boolean Login = lm.LoginCon(phone, name);
 					if (Login == true) {
 						System.out.println();
-						System.out.println("4°¡Áö ÄûÁî Áß ÇÏ³ª¸¦ Ç®¾î ºÁºÁºÁºÁ");
-						System.out.print("[1]³Í¼¾½º [2]»çÀÚ¼º¾î [3]ÃÊ¼ºÄûÁî [4]¿µ¾î´Ü¾î : \t");
+						System.out.println("4ê°€ì§€ í€´ì¦ˆ ì¤‘ í•˜ë‚˜ë¥¼ í’€ì–´ ë´ë´ë´ë´");
+						System.out.print("[1]ë„Œì„¼ìŠ¤ [2]ì‚¬ìì„±ì–´ [3]ì´ˆì„±í€´ì¦ˆ [4]ì˜ì–´ë‹¨ì–´ : ");
 						int quiz = sc.nextInt();
 
-						if (quiz == 1) { // ³Í¼¾½º
-							System.out.println("´ç½ÅÀÇ ¼¾½º¸¦ »Ë³»´Â Å¸ÀÓ~~¸¶!");
-							// ³Í¼¾½º ºù°íÆÇ Ãâ·Â
+						if (quiz == 1) { // ë„Œì„¼ìŠ¤
+							System.out.println("ë‹¹ì‹ ì˜ ì„¼ìŠ¤ë¥¼ ë½ë‚´ëŠ” íƒ€ì„~~ë§ˆ!");
+							// ë„Œì„¼ìŠ¤ ë¹™ê³ íŒ ì¶œë ¥
 							while (true) {
-								System.out.println("¸î¹øÀ» Çª½Ã°Ú½À´Ï±î?");
+								System.out.println("ê³¨ë¼ê³¨ë¼~~~?");
 								int num = sc.nextInt();
-								// ¸Â´Â Å×ÀÌºí °¡Á®¿À±â
-								// ¹®Á¦ Ãâ·Â
+								// ë§ëŠ” í…Œì´ë¸” ê°€ì ¸ì˜¤ê¸°
+								// ë¬¸ì œ ì¶œë ¥
 								System.out.println();
-								System.out.println("Á¤´ä ÀÔ·Â >> ");
+								System.out.println("ì •ë‹µ ì…ë ¥ >> ");
 								String inputAnswer = sc.next();
 								qdao.isCorr(inputAnswer);
 								if (qdao.isCorr(inputAnswer) == true) {
-									System.out.println("Á¤´äÀÔ´Ï´Ù!");
+									System.out.println("ì •ë‹µì…ë‹ˆë‹¤!");
 								} else {
-									System.out.println("¶¯!!!!!!!");
+									System.out.println("ë•¡!!!!!!!");
 								}
-								// ºù°íÀÇ °¹¼ö°¡ 3°³°¡ µÇ¸é Á¾·á
+								// ë¹™ê³ ì˜ ê°¯ìˆ˜ê°€ 3ê°œê°€ ë˜ë©´ ì¢…ë£Œ
 								break;
 							}
 
-						} // ³Í¼¾½º Á¾·á
-						else if (quiz == 2) { // »çÀÚ¼º¾î
-							System.out.println("´ç½ÅÀÇ Áö½ÄÀ» »Ë³»´Â Å¸ÀÓ~~¸¶! ");
-							// »çÀÚ¼º¾î ºù°íÆÇ Ãâ·Â
+						} // ë„Œì„¼ìŠ¤ ì¢…ë£Œ
+						else if (quiz == 2) { // ì‚¬ìì„±ì–´
+							System.out.println("ë‹¹ì‹ ì˜ ì§€ì‹ì„ ë½ë‚´ëŠ” íƒ€ì„~~ë§ˆ! ");
+							// ì‚¬ìì„±ì–´ ë¹™ê³ íŒ ì¶œë ¥
 							while (true) {
-								System.out.println("¸î¹øÀ» Çª½Ã°Ú½À´Ï±î?");
+								System.out.println("ê³¨ë¼ê³¨ë¼~~~?");
 								int num = sc.nextInt();
-								// ¸Â´Â Å×ÀÌºí °¡Á®¿À±â
-								// ¹®Á¦ Ãâ·Â
+								// ë§ëŠ” í…Œì´ë¸” ê°€ì ¸ì˜¤ê¸°
+								// ë¬¸ì œ ì¶œë ¥
 								System.out.println();
-								System.out.println("Á¤´ä ÀÔ·Â >> ");
+								System.out.println("ì •ë‹µ ì…ë ¥ >> ");
 								String inputAnswer = sc.next();
 								qdao.isCorr(inputAnswer);
 								if (qdao.isCorr(inputAnswer) == true) {
-									System.out.println("Á¤´äÀÔ´Ï´Ù!");
+									System.out.println("ì •ë‹µì…ë‹ˆë‹¤!");
 								} else {
-									System.out.println("¶¯!!!!!!!");
+									System.out.println("ë•¡!!!!!!!");
 								}
-								// ºù°íÀÇ °¹¼ö°¡ 3°³°¡ µÇ¸é Á¾·á
+								// ë¹™ê³ ì˜ ê°¯ìˆ˜ê°€ 3ê°œê°€ ë˜ë©´ ì¢…ë£Œ
 								break;
 							}
 
-						} // »çÀÚ¼º¾î Á¾·á
+						} // ì‚¬ìì„±ì–´ ì¢…ë£Œ
 
-						else if (quiz == 3) { // ÃÊ¼ºÄûÁî
-							System.out.println("ÄÄÇ»ÅÍÀÇ ¸¶À½À» ÀĞ´Â Å¸ÀÓ~~¸¶!");
-							// ÃÊ¼ºÄûÁî ºù°íÆÇ Ãâ·Â
+						else if (quiz == 3) { // ì´ˆì„±í€´ì¦ˆ
+							System.out.println("ì»´í“¨í„°ì˜ ë§ˆìŒì„ ì½ëŠ” íƒ€ì„~~ë§ˆ!");
+							// ì´ˆì„±í€´ì¦ˆ ë¹™ê³ íŒ ì¶œë ¥
 							while (true) {
-								System.out.println("¸î¹øÀ» Çª½Ã°Ú½À´Ï±î?");
+								System.out.println("ê³¨ë¼ê³¨ë¼~~~?");
 								int num = sc.nextInt();
-								// ¸Â´Â Å×ÀÌºí °¡Á®¿À±â
-								// ¹®Á¦ Ãâ·Â
+								// ë§ëŠ” í…Œì´ë¸” ê°€ì ¸ì˜¤ê¸°
+								// ë¬¸ì œ ì¶œë ¥
 								System.out.println();
-								System.out.println("Á¤´ä ÀÔ·Â >> ");
+								System.out.println("ì •ë‹µ ì…ë ¥ >> ");
 								String inputAnswer = sc.next();
 								qdao.isCorr(inputAnswer);
 								if (qdao.isCorr(inputAnswer) == true) {
-									System.out.println("Á¤´äÀÔ´Ï´Ù!");
+									System.out.println("ì •ë‹µì…ë‹ˆë‹¤!");
 								} else {
-									System.out.println("¶¯!!!!!!!");
+									System.out.println("ë•¡!!!!!!!");
 								}
-								// ºù°íÀÇ °¹¼ö°¡ 3°³°¡ µÇ¸é Á¾·á
+								// ë¹™ê³ ì˜ ê°¯ìˆ˜ê°€ 3ê°œê°€ ë˜ë©´ ì¢…ë£Œ
 								break;
 							}
-						} // ÃÊ¼ºÄûÁî Á¾·á
+						} // ì´ˆì„±í€´ì¦ˆ ì¢…ë£Œ
 
-						else if (quiz == 4) { // ¿µ¾îÄûÁî
-							System.out.println("À¯Ä¡¿ø»ıµµ Ç®¼öÀÖ´Ù´Â ¿µ´Ü¾îÇ®±â Å¸ÀÓ~~¸¶!");
+						else if (quiz == 4) { // ì˜ì–´í€´ì¦ˆ
+							System.out.println("ìœ ì¹˜ì›ìƒë„ í’€ìˆ˜ìˆë‹¤ëŠ” ì˜ë‹¨ì–´í’€ê¸° íƒ€ì„~~ë§ˆ!");
 							while (true) {
-								System.out.println("¸î¹øÀ» Çª½Ã°Ú½À´Ï±î?");
+								System.out.println("ê³¨ë¼ê³¨ë¼~~~?");
 								int num = sc.nextInt();
-								// ¸Â´Â Å×ÀÌºí °¡Á®¿À±â
-								// ¹®Á¦ Ãâ·Â
+								// ë§ëŠ” í…Œì´ë¸” ê°€ì ¸ì˜¤ê¸°
+								// ë¬¸ì œ ì¶œë ¥
 								System.out.println();
-								System.out.println("Á¤´ä ÀÔ·Â >> ");
+								System.out.println("ì •ë‹µ ì…ë ¥ >> ");
 								String inputAnswer = sc.next();
 								qdao.isCorr(inputAnswer);
 								if (qdao.isCorr(inputAnswer) == true) {
-									System.out.println("Á¤´äÀÔ´Ï´Ù!");
+									System.out.println("ì •ë‹µì…ë‹ˆë‹¤!");
 								} else {
-									System.out.println("¶¯!!!!!!!");
+									System.out.println("ë•¡!!!!!!!");
 								}
-								// ºù°íÀÇ °¹¼ö°¡ 3°³°¡ µÇ¸é Á¾·á
+								// ë¹™ê³ ì˜ ê°¯ìˆ˜ê°€ 3ê°œê°€ ë˜ë©´ ì¢…ë£Œ
 								break;
 							}
 
-						} // ¿µ¾îÄûÁî Á¾·á
+						} // ì˜ì–´í€´ì¦ˆ ì¢…ë£Œ
 
-						else { // Àß¸ø´©¸£¸é
-							System.out.println("´Ù½Ã ¼±ÅÃÇÏ¼¼¿ä!!!");
-						}
+						else { // ì˜ëª»ëˆ„ë¥´ë©´
+							System.out.println("ë‹¤ì‹œ ì„ íƒí•˜ì„¸ìš”!!!");
+
+						} // ì¢…ë£Œ
 					}
 				} else if (choice == 3) {
-					System.out.println("·©Å·À» Á¶È¸ÇÕ´Ï´Ù.");
+					System.out.println("ë­í‚¹ì„ ì¡°íšŒí•©ë‹ˆë‹¤.");
 					rank.rankView();
 					System.out.println();
 				} else {
-					System.out.println("Àß¸ø ´­·¶½À´Ï´Ù.");
+					System.out.println("ì˜ëª» ëˆŒë €ìŠµë‹ˆë‹¤.");
 					System.out.println();
 				}
+			} else {
+				System.out.println("ê²Œì„ ì¢…ë£Œ");
+				break;
 			}
-			System.out.println("°ÔÀÓ Á¾·á");
-			break;
 		}
 	}
 }
