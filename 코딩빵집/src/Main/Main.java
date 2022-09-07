@@ -26,8 +26,7 @@ public class Main {
 		RankDAO rdao = new RankDAO();
 		RankDTO rdto;
 		Controller lm = new Controller();
-		
-		
+
 		image img = new image();
 		Scanner sc = new Scanner(System.in);
 		story title = new story();
@@ -50,7 +49,7 @@ public class Main {
 				String name = sc.next();
 				System.out.print("폰번호 입력 : ");
 				int phone = sc.nextInt();
-				lm.InsertCon(phone, name);
+				int Join = lm.InsertCon(phone, name);
 				System.out.println();
 				System.out.println("주문 하시겠습니까? ");
 				System.out.print("[1]매장식사 [2]포장 ");
@@ -213,7 +212,8 @@ public class Main {
 				String name = sc.next();
 				System.out.print("폰번호 입력 : ");
 				int phone = sc.nextInt();
-				lm.LoginCon(phone, name);
+				boolean Login = lm.LoginCon(phone, name);
+				
 				System.out.println();
 				System.out.println("주문 하시겠습니까? ");
 				System.out.print("[1]매장식사 [2]포장 ");
