@@ -37,7 +37,7 @@ public class QuizDAO {
 		connect();
 
 		try {
-			String sql = "select * from nonsense where n_num = ?";
+			String sql = "select * from nonsense_list where n_num = ?";
 			psmt = conn.prepareStatement(sql);
 			psmt.setInt(1, qnum);
 
