@@ -38,17 +38,13 @@ public class Main {
 		System.out.println();
 		int[][] QuizArr = new int[5][5];
 		int ox = 1;
-		ArrayList<Integer> selNum = new ArrayList<Integer>();
+		int score=0;
+		
 		while (true) {
-			for (int i = 0; i < 5; i++) {
-				for (int j = 0; j < 5; j++) {
-					QuizArr[i][j] = ox++;
-				}
-			}
 
 			if (game == 1) { // 게임시작
 				System.out.println("선택하시오");
-				System.out.print("[1]회원등록 [2]로그인 [3]랭킹조회 : ");
+				System.out.print("[1]회원등록 [2]로그인 [3]랭킹조회 [4]게임종료 : ");
 				int choice = sc.nextInt();
 
 				if (choice == 1) { // 회원등록
@@ -72,6 +68,11 @@ public class Main {
 						int quiz = sc.nextInt();
 
 						if (quiz == 1) { // 넌센스
+							for (int i = 0; i < 5; i++) {
+								for (int j = 0; j < 5; j++) {
+									QuizArr[i][j] = ox++;
+								}
+							}
 							System.out.println("당신의 센스를 뽐내는 타임~~마!");
 							pan.bingopan();
 							int bingocnt = 0;
@@ -79,10 +80,6 @@ public class Main {
 								bingocnt = 0;
 								System.out.println("골라골라~~~?");
 								int num = sc.nextInt();
-								;
-
-								// 맞는 테이블 가져오기
-								// 문제 출력
 								System.out.println();
 
 								qdao.getQuizNon(num);
@@ -113,19 +110,25 @@ public class Main {
 										}
 									}
 									System.out.println("");
-									// 빙고의 갯수가 3개가 되면 종료
 								}
 
 								bingocnt = bingoCnt(QuizArr, bingocnt);
 
 								if (bingocnt == 3) {
-									System.out.println("빙고 3줄 성공");
+									System.out.println("빙고 3줄 성공!!!!! 100점 획득!!!");
 									pan.bingo3();
+									score += 100;
+									rdao.rankInsert(phone, score);
 									break;
 								}
 							}
 						} // 넌센스 종료
 						else if (quiz == 2) { // 사자성어
+							for (int i = 0; i < 5; i++) {
+								for (int j = 0; j < 5; j++) {
+									QuizArr[i][j] = ox++;
+								}
+							}
 							System.out.println("당신의 지식을 뽐내는 타임~~마! ");
 							// 사자성어 빙고판 출력
 							pan.bingopan();
@@ -134,12 +137,7 @@ public class Main {
 								bingocnt = 0;
 								System.out.println("골라골라~~~?");
 								int num = sc.nextInt();
-								;
-
-								// 맞는 테이블 가져오기
-								// 문제 출력
 								System.out.println();
-
 								qdao.getQuizIdi(num);
 								System.out.println("");
 
@@ -168,7 +166,6 @@ public class Main {
 										}
 									}
 									System.out.println("");
-									// 빙고의 갯수가 3개가 되면 종료
 								}
 
 								bingocnt = bingoCnt(QuizArr, bingocnt);
@@ -176,6 +173,8 @@ public class Main {
 								if (bingocnt == 3) {
 									System.out.println("빙고 3줄 성공");
 									pan.bingo3();
+									score += 100;
+									rdao.rankInsert(phone, score);
 									break;
 								}
 							}
@@ -183,18 +182,19 @@ public class Main {
 						} // 사자성어 종료
 
 						else if (quiz == 3) { // 초성퀴즈
+							for (int i = 0; i < 5; i++) {
+								for (int j = 0; j < 5; j++) {
+									QuizArr[i][j] = ox++;
+								}
+							}
 							System.out.println("컴퓨터의 마음을 읽는 타임~~마!");
-							// 초성퀴즈 빙고판 출력
+							System.out.println("주제는 음식!! 다 맞춘다면 당신은 쩝쩝박사!!");
 							pan.bingopan();
 							int bingocnt = 0;
 							while (true) {
 								bingocnt = 0;
 								System.out.println("골라골라~~~?");
 								int num = sc.nextInt();
-								;
-
-								// 맞는 테이블 가져오기
-								// 문제 출력
 								System.out.println();
 
 								qdao.getQuizCho(num);
@@ -225,7 +225,6 @@ public class Main {
 										}
 									}
 									System.out.println("");
-									// 빙고의 갯수가 3개가 되면 종료
 								}
 
 								bingocnt = bingoCnt(QuizArr, bingocnt);
@@ -233,12 +232,19 @@ public class Main {
 								if (bingocnt == 3) {
 									System.out.println("빙고 3줄 성공");
 									pan.bingo3();
+									score += 100;
+									rdao.rankInsert(phone, score);
 									break;
 								}
 							}
 						} // 초성퀴즈 종료
 
 						else if (quiz == 4) { // 영어퀴즈
+							for (int i = 0; i < 5; i++) {
+								for (int j = 0; j < 5; j++) {
+									QuizArr[i][j] = ox++;
+								}
+							}
 							System.out.println("유치원생도 풀수있다는 영단어풀기 타임~~마!");
 							pan.bingopan();
 							int bingocnt = 0;
@@ -246,10 +252,6 @@ public class Main {
 								bingocnt = 0;
 								System.out.println("골라골라~~~?");
 								int num = sc.nextInt();
-								;
-
-								// 맞는 테이블 가져오기
-								// 문제 출력
 								System.out.println();
 
 								qdao.getQuizEng(num);
@@ -280,7 +282,6 @@ public class Main {
 										}
 									}
 									System.out.println("");
-									// 빙고의 갯수가 3개가 되면 종료
 								}
 
 								bingocnt = bingoCnt(QuizArr, bingocnt);
@@ -288,6 +289,8 @@ public class Main {
 								if (bingocnt == 3) {
 									System.out.println("빙고 3줄 성공");
 									pan.bingo3();
+									score += 100;
+									rdao.rankInsert(phone, score);
 									break;
 								}
 							}
