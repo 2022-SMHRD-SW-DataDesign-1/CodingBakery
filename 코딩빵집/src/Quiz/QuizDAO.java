@@ -33,7 +33,32 @@ public class QuizDAO {
 			e.printStackTrace();
 		}
 	}
+	public void getQuizNon(int qnum) {
+		connect();
 
+		try {
+			String sql = "select * from nonsense where n_num = ?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, qnum);
+
+			rs = psmt.executeQuery();
+
+			System.out.println("Quiz");
+			while (rs.next()) {
+				String quiz = rs.getString(2);
+				this.quiz = quiz;
+				String answer = rs.getString(3);
+				this.answer = answer;
+
+				System.out.printf("%s", quiz);
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+	}
+	
 	public void getQuizCho(int qnum) {
 		connect();
 
