@@ -10,45 +10,6 @@ public class image {
 	
 
 
-	public String getCoke() {
-		return Coke;
-	}
-
-
-	public String getBreadSet() {
-		return BreadSet;
-	}
-
-
-	public String getSand() {
-		return Sand;
-	}
-
-
-	public String getBread() {
-		return Bread;
-	}
-
-
-	public String getCheese() {
-		return Cheese;
-	}
-
-
-	public String getVegetable() {
-		return Vegetable;
-	}
-
-
-	public String getSauce() {
-		return Sauce;
-	}
-
-
-	public String getHaem() {
-		return Haem;
-	}
-
 
 	String Coke ="                  @$##=~                 \r\n"
 				+ "                !:$$#@@                 \r\n"

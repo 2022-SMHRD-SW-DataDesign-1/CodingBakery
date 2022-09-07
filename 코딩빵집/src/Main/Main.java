@@ -30,7 +30,7 @@ public class Main {
 		RankDAO rdao = new RankDAO();
 		RankDTO rdto;
 		Controller lm = new Controller();
-		image img = new image; 
+		
 		
 
 		Scanner sc = new Scanner(System.in);
@@ -38,7 +38,7 @@ public class Main {
 
 		QuizDAO qdao = new QuizDAO();
 		
-		String[] imgArr = {img.getHaem(),img.getCheese(),img.getVegetable(),img.getSauce()};
+		
 		int cnt = 0;
 
 		title.title(); // 코딩빵집 타이틀 출력
