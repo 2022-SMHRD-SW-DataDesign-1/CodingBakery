@@ -5,7 +5,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Random;
 
 public class QuizDAO {
 
@@ -13,9 +12,6 @@ public class QuizDAO {
 	PreparedStatement psmt = null;
 	ResultSet rs;
 	boolean result;
-	int ran = 0;
-	int sleq = 0;
-	Random rd = new Random();
 	String quiz = null;
 	String answer = null;
 
@@ -37,12 +33,87 @@ public class QuizDAO {
 			e.printStackTrace();
 		}
 	}
-
-	public void getQuiz(int qnum) {
+	public void getQuizNon(int qnum) {
 		connect();
 
 		try {
-			String sql = "select * from quiz_list where qnum = ?";
+			String sql = "select * from nonsense where n_num = ?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, qnum);
+
+			rs = psmt.executeQuery();
+
+			System.out.println("Quiz");
+			while (rs.next()) {
+				String quiz = rs.getString(2);
+				this.quiz = quiz;
+				String answer = rs.getString(3);
+				this.answer = answer;
+
+				System.out.printf("%s", quiz);
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+	}
+	
+	public void getQuizCho(int qnum) {
+		connect();
+
+		try {
+			String sql = "select * from choseong where c_num = ?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, qnum);
+
+			rs = psmt.executeQuery();
+
+			System.out.println("Quiz");
+			while (rs.next()) {
+				String quiz = rs.getString(2);
+				this.quiz = quiz;
+				String answer = rs.getString(3);
+				this.answer = answer;
+
+				System.out.printf("%s", quiz);
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+	}
+	public void getQuizEng(int qnum) {
+		connect();
+
+		try {
+			String sql = "select * from eng where eng_num = ?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, qnum);
+
+			rs = psmt.executeQuery();
+
+			System.out.println("Quiz");
+			while (rs.next()) {
+				String quiz = rs.getString(2);
+				this.quiz = quiz;
+				String answer = rs.getString(3);
+				this.answer = answer;
+
+				System.out.printf("%s", quiz);
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+	}
+	public void getQuizIdi(int qnum) {
+		connect();
+
+		try {
+			String sql = "select * from idiom where i_num = ?";
 			psmt = conn.prepareStatement(sql);
 			psmt.setInt(1, qnum);
 
@@ -69,25 +140,8 @@ public class QuizDAO {
 		return result;
 	}
 
-//	public void result() {
-//		if (result == true) {
-//			System.out.println("¡§¥‰¿‘¥œ¥Ÿ!");
-//			System.out.println("≈‰«Œ »πµÊ º∫∞¯!!");
-//			System.out.println("æ∆ΩŒ~ 10¡° »πµÊ!!!");
-//		}else {
-//			System.out.println("∂Ø!!!!!!!!!");
-//			System.out.println("¥ŸΩ√ µµ¿¸«œººø‰!");
-//		}
-//	}
-//	
-//	
-//	public int scsum(int score) {
-//		
-//		if(result == true) {
-//			score+=10;
-//		}
-//		
-//	return score;	
-//	}
-
+	
+	
+	
 }
+
