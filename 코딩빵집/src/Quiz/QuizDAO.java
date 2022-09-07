@@ -72,16 +72,26 @@ public class QuizDAO {
 		return result;
 	}
 
-	public void result() {
-		if (result == true) {
-			System.out.println("¡§¥‰¿‘¥œ¥Ÿ!");
-			System.out.println("≈‰«Œ »πµÊ º∫∞¯!!");
-			System.out.println("æ∆ΩŒ~ 10¡° »πµÊ!!!");
-		}else {
-			System.out.println("∂Ø!!!!!!!!!");
-			System.out.println("¥ŸΩ√ µµ¿¸«œººø‰!");
-		}
-	}
+//	public void result() {
+//		if (result == true) {
+//			System.out.println("¡§¥‰¿‘¥œ¥Ÿ!");
+//			System.out.println("≈‰«Œ »πµÊ º∫∞¯!!");
+//			System.out.println("æ∆ΩŒ~ 10¡° »πµÊ!!!");
+//		}else {
+//			System.out.println("∂Ø!!!!!!!!!");
+//			System.out.println("¥ŸΩ√ µµ¿¸«œººø‰!");
+//		}
+//	}
+//	
+//	
+//	public int scsum(int score) {
+//		
+//		if(result == true) {
+//			score+=10;
+//		}
+//		
+//	return score;	
+//	}
 
 	
 }
