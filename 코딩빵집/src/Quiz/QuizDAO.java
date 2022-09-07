@@ -42,9 +42,6 @@ public class QuizDAO {
 		connect();
 
 		try {
-
-			qnum = rd.nextInt(20) + 1;
-			this.sleq = qnum;
 			String sql = "select * from quiz_list where qnum = ?";
 			psmt = conn.prepareStatement(sql);
 			psmt.setInt(1, qnum);
