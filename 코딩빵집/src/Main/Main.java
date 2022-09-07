@@ -388,5 +388,8 @@ public class Main {
 			}
 		}
 		System.out.println("프로그램이 종료되었습니다.");
+		System.out.println("망햇다");
 	}
+	
+
 }
