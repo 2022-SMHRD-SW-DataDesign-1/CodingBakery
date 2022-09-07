@@ -70,6 +70,7 @@ public class Main {
 									System.out.println("땡!!!!!!!");
 								}
 								// 빙고의 갯수가 3개가 되면 종료
+								
 								break;
 							}
 
@@ -144,8 +145,7 @@ public class Main {
 
 						else { // 잘못누르면
 							System.out.println("다시 선택하세요!!!");
-
-						} // 종료
+						} 
 					}
 				} else if (choice == 2) {
 					System.out.print("이름 입력 : ");
@@ -250,8 +250,7 @@ public class Main {
 
 						else { // 잘못누르면
 							System.out.println("다시 선택하세요!!!");
-
-						} // 종료
+						}
 					}
 				} else if (choice == 3) {
 					System.out.println("랭킹을 조회합니다.");
@@ -263,6 +262,7 @@ public class Main {
 				}
 			}
 			System.out.println("게임 종료");
+			break;
 		}
 	}
 }
