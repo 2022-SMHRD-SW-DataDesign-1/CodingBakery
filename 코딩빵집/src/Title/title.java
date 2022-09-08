@@ -3,6 +3,8 @@ package Title;
 public class title {
 
 	public void title1() {
+		System.out.println();
+		System.out.println();
 		System.out.println(
 				" ____                                                    __      __                    ___        __     \r\n"
 				+ "/\\  _`\\     __                                          /\\ \\  __/\\ \\                  /\\_ \\      /\\ \\    \r\n"
@@ -12,8 +14,9 @@ public class title {
 				+ "   \\ \\____/  \\ \\_\\\\ \\_\\ \\_\\\\ \\____ \\ \\ \\____/              \\ `\\___x___/\\ \\____/ \\ \\_\\    /\\____\\\\ \\___,_\\\r\n"
 				+ "    \\/___/    \\/_/ \\/_/\\/_/ \\/___L\\ \\ \\/___/                '\\/__//__/  \\/___/   \\/_/    \\/____/ \\/__,_ /\r\n"
 				+ "                              /\\____/                                                                    \r\n"
-				+ "                              \\_/__/                                                                     ");
-
+				+ "                              \\_/__/                                                                      \r\n");
+		
+		System.out.println();
 		System.out.println("BINGO 나라에 오신걸 환영합니다!!!");
 		System.out.println("저희 BINGO 나라에서는 당신이 오시기를 기다리고 있었어요.");
 		System.out.println("당신을 위해 4가지의 장르를 준비해뒀답니다.");
