@@ -12,6 +12,7 @@ import Rank.RankDTO;
 import Rank.Rankview;
 import Title.bingo;
 import Title.title;
+import javazoom.jl.player.MP3Player;
 
 public class Main {
 
@@ -26,12 +27,11 @@ public class Main {
 		title story = new title();
 		bingo pan = new bingo();
 		QuizDAO qdao = new QuizDAO();
+		MP3Player mp3 = new MP3Player();
 
 		Scanner sc = new Scanner(System.in);
 		story.title1();
 		System.out.println();
-
-		music.m1();
 		System.out.println();
 		System.out.println("게임을 시작하시겠습니까?");
 		System.out.print("[1]시작 [2]종료 : ");
@@ -40,6 +40,7 @@ public class Main {
 		int[][] QuizArr = new int[5][5];
 		int ox = 1;
 		int score=0;
+		mp3.play(".//music//배경음악.mp3");
 		
 		while (true) {
 
@@ -332,6 +333,7 @@ public class Main {
 					System.out.println();
 				} else if(choice ==4) {
 					System.out.println("게임 종료.");
+					mp3.stop();
 					System.out.println();
 					break;
 				}else {
@@ -339,6 +341,7 @@ public class Main {
 				}
 			} else {
 				System.out.println("게임 종료");
+				mp3.stop();
 				break;
 			}
 		}

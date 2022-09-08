@@ -4,10 +4,7 @@ import javazoom.jl.player.MP3Player;
 
 public class music {
 
-	public static void m1() {
-		MP3Player mp3 = new MP3Player();
-		mp3.play(".//music//πË∞Ê¿Ωæ«.mp3");
-	}
+	
 
 	public static void m2() {
 		MP3Player mp3 = new MP3Player();
