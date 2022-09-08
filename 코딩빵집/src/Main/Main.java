@@ -44,6 +44,7 @@ public class Main {
 
 			if (game == 1) { // 게임시작
 				System.out.println("선택하시오");
+				music.m1();
 				System.out.print("[1]회원등록 [2]로그인 [3]랭킹조회 [4]게임종료 : ");
 				int choice = sc.nextInt();
 
@@ -64,21 +65,23 @@ public class Main {
 					if (Login == true) {
 						System.out.println();
 						System.out.println("4가지 퀴즈 중 하나를 풀어 봐봐봐봐");
-						System.out.print("[1]넌센스 [2]사자성어 [3]초성퀴즈 [4]영어단어 : ");
+						System.out.print("[1]난센스 [2]사자성어 [3]초성퀴즈 [4]영어단어 : ");
 						int quiz = sc.nextInt();
 
-						if (quiz == 1) { // 넌센스
+						if (quiz == 1) { // 난센스
 							for (int i = 0; i < 5; i++) {
 								for (int j = 0; j < 5; j++) {
 									QuizArr[i][j] = ox++;
 								}
 							}
 							System.out.println("당신의 센스를 뽐내는 타임~~마!");
+							System.out.println("!!!!주의!!!!!");
+							System.out.println("정답에 띄어쓰기를 하지 않습니다");
 							pan.bingopan();
 							int bingocnt = 0;
 							while (true) {
 								bingocnt = 0;
-								System.out.println("골라골라~~~?");
+								System.out.println("골라골라~~~? 원하는 번호를 골라~~~?");
 								int num = sc.nextInt();
 								System.out.println();
 
@@ -131,12 +134,13 @@ public class Main {
 								}
 							}
 							System.out.println("당신의 지식을 뽐내는 타임~~마! ");
+							System.out.println("생각보다 어려울껄???? 우리는 힌트가 없거든");
 							// 사자성어 빙고판 출력
 							pan.bingopan();
 							int bingocnt = 0;
 							while (true) {
 								bingocnt = 0;
-								System.out.println("골라골라~~~?");
+								System.out.println("골라골라~~~? 원하는 번호를 골라~~~?");
 								int num = sc.nextInt();
 								System.out.println();
 								qdao.getQuizIdi(num);
@@ -173,6 +177,7 @@ public class Main {
 
 								if (bingocnt == 3) {
 									System.out.println("빙고 3줄 성공!!!!! 100점 획득!!!");
+									System.out.println("넌 정말 똑똑하구나~!~!~!~!");
 									pan.bingo3();
 									score += 100;
 									rdao.rankInsert(phone, score);
@@ -194,7 +199,7 @@ public class Main {
 							int bingocnt = 0;
 							while (true) {
 								bingocnt = 0;
-								System.out.println("골라골라~~~?");
+								System.out.println("골라골라~~~? 원하는 번호를 골라~~~?");
 								int num = sc.nextInt();
 								System.out.println();
 
@@ -232,6 +237,7 @@ public class Main {
 
 								if (bingocnt == 3) {
 									System.out.println("빙고 3줄 성공!!!!! 100점 획득!!!");
+									System.out.println("!축! 당신을 쩝쩝박사로 임명합니다");
 									pan.bingo3();
 									score += 100;
 									rdao.rankInsert(phone, score);
@@ -246,12 +252,13 @@ public class Main {
 									QuizArr[i][j] = ox++;
 								}
 							}
-							System.out.println("유치원생도 풀수있다는 영단어풀기 타임~~마!");
+							System.out.println("당신의 영어실력을 뽐낼차례! 영단어풀기 타임~~마!");
+							System.out.println("생각보다 어려울 수 이써요~~");
 							pan.bingopan();
 							int bingocnt = 0;
 							while (true) {
 								bingocnt = 0;
-								System.out.println("골라골라~~~?");
+								System.out.println("골라골라~~~? 원하는 번호를 골라~~~?");
 								int num = sc.nextInt();
 								System.out.println();
 
