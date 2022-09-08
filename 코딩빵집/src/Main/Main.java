@@ -116,6 +116,7 @@ public class Main {
 
 								if (bingocnt == 3) {
 									System.out.println("빙고 3줄 성공!!!!! 100점 획득!!!");
+									System.out.println("당신 센스가 좀 넘치는걸~~");
 									pan.bingo3();
 									score += 100;
 									rdao.rankInsert(phone, score);
@@ -171,7 +172,7 @@ public class Main {
 								bingocnt = bingoCnt(QuizArr, bingocnt);
 
 								if (bingocnt == 3) {
-									System.out.println("빙고 3줄 성공");
+									System.out.println("빙고 3줄 성공!!!!! 100점 획득!!!");
 									pan.bingo3();
 									score += 100;
 									rdao.rankInsert(phone, score);
@@ -230,7 +231,7 @@ public class Main {
 								bingocnt = bingoCnt(QuizArr, bingocnt);
 
 								if (bingocnt == 3) {
-									System.out.println("빙고 3줄 성공");
+									System.out.println("빙고 3줄 성공!!!!! 100점 획득!!!");
 									pan.bingo3();
 									score += 100;
 									rdao.rankInsert(phone, score);
@@ -287,7 +288,7 @@ public class Main {
 								bingocnt = bingoCnt(QuizArr, bingocnt);
 
 								if (bingocnt == 3) {
-									System.out.println("빙고 3줄 성공");
+									System.out.println("빙고 3줄 성공!!!!! 100점 획득!!!");
 									pan.bingo3();
 									score += 100;
 									rdao.rankInsert(phone, score);
