@@ -74,6 +74,7 @@ public class Main {
 									QuizArr[i][j] = ox++;
 								}
 							}
+							pan.start();
 							System.out.println("당신의 센스를 뽐내는 타임~~마!");
 							System.out.println("!!!!주의!!!!!");
 							System.out.println("정답에 띄어쓰기를 하지 않습니다");
@@ -136,6 +137,7 @@ public class Main {
 									QuizArr[i][j] = ox++;
 								}
 							}
+							pan.start();
 							System.out.println("당신의 지식을 뽐내는 타임~~마! ");
 							System.out.println("생각보다 어려울껄???? 우리는 힌트가 없거든");
 							// 사자성어 빙고판 출력
@@ -199,6 +201,7 @@ public class Main {
 									QuizArr[i][j] = ox++;
 								}
 							}
+							pan.start();
 							System.out.println("컴퓨터의 마음을 읽는 타임~~마!");
 							System.out.println("주제는 음식!! 다 맞춘다면 당신은 쩝쩝박사!!");
 							pan.bingopan();
@@ -261,6 +264,7 @@ public class Main {
 									QuizArr[i][j] = ox++;
 								}
 							}
+							pan.start();
 							System.out.println("당신의 영어실력을 뽐낼차례! 영단어풀기 타임~~마!");
 							System.out.println("생각보다 어려울 수 이써요~~");
 							pan.bingopan();
