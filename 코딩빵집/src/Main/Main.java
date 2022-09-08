@@ -296,6 +296,7 @@ public class Main {
 
 								if (bingocnt == 3) {
 									System.out.println("빙고 3줄 성공!!!!! 100점 획득!!!");
+									System.out.println("꽤 많이 알고있네요*^^*");
 									pan.bingo3();
 									score += 100;
 									rdao.rankInsert(phone, score);
