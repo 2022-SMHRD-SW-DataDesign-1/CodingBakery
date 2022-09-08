@@ -40,7 +40,7 @@ public class Main {
 		int[][] QuizArr = new int[5][5];
 		int ox = 1;
 		int score=0;
-		mp3.play(".//music//배경음악.mp3");
+		mp3.play(".\\music\\배경음악.mp3");
 		
 		while (true) {
 
