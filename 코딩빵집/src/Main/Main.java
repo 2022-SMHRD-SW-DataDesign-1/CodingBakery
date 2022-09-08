@@ -31,6 +31,7 @@ public class Main {
 		story.title1();
 		System.out.println();
 
+		music.m1();
 		System.out.println();
 		System.out.println("게임을 시작하시겠습니까?");
 		System.out.print("[1]시작 [2]종료 : ");
@@ -44,7 +45,6 @@ public class Main {
 
 			if (game == 1) { // 게임시작
 				System.out.println("선택하시오");
-				music.m1();
 				System.out.print("[1]회원등록 [2]로그인 [3]랭킹조회 [4]게임종료 : ");
 				int choice = sc.nextInt();
 
@@ -93,8 +93,10 @@ public class Main {
 								qdao.isCorr(inputAnswer);
 								if (qdao.isCorr(inputAnswer) == true) {
 									System.out.println("정답입니다!");
+									music.m3();
 								} else {
 									System.out.println("땡!!!!!!!");
+									music.m4();
 								}
 								for (int i = 0; i < 5; i++) {
 									for (int j = 0; j < 5; j++) {
@@ -119,6 +121,7 @@ public class Main {
 
 								if (bingocnt == 3) {
 									System.out.println("빙고 3줄 성공!!!!! 100점 획득!!!");
+									music.m2();
 									System.out.println("당신 센스가 좀 넘치는걸~~");
 									pan.bingo3();
 									score += 100;
@@ -151,8 +154,10 @@ public class Main {
 								qdao.isCorr(inputAnswer);
 								if (qdao.isCorr(inputAnswer) == true) {
 									System.out.println("정답입니다!");
+									music.m3();
 								} else {
 									System.out.println("땡!!!!!!!");
+									music.m4();
 								}
 								for (int i = 0; i < 5; i++) {
 									for (int j = 0; j < 5; j++) {
@@ -177,6 +182,7 @@ public class Main {
 
 								if (bingocnt == 3) {
 									System.out.println("빙고 3줄 성공!!!!! 100점 획득!!!");
+									music.m2();
 									System.out.println("넌 정말 똑똑하구나~!~!~!~!");
 									pan.bingo3();
 									score += 100;
@@ -211,8 +217,10 @@ public class Main {
 								qdao.isCorr(inputAnswer);
 								if (qdao.isCorr(inputAnswer) == true) {
 									System.out.println("정답입니다!");
+									music.m3();
 								} else {
 									System.out.println("땡!!!!!!!");
+									music.m4();
 								}
 								for (int i = 0; i < 5; i++) {
 									for (int j = 0; j < 5; j++) {
@@ -237,6 +245,7 @@ public class Main {
 
 								if (bingocnt == 3) {
 									System.out.println("빙고 3줄 성공!!!!! 100점 획득!!!");
+									music.m2();
 									System.out.println("!축! 당신을 쩝쩝박사로 임명합니다");
 									pan.bingo3();
 									score += 100;
@@ -270,8 +279,10 @@ public class Main {
 								qdao.isCorr(inputAnswer);
 								if (qdao.isCorr(inputAnswer) == true) {
 									System.out.println("정답입니다!");
+									music.m3();
 								} else {
 									System.out.println("땡!!!!!!!");
+									music.m4();
 								}
 								for (int i = 0; i < 5; i++) {
 									for (int j = 0; j < 5; j++) {
@@ -296,6 +307,7 @@ public class Main {
 
 								if (bingocnt == 3) {
 									System.out.println("빙고 3줄 성공!!!!! 100점 획득!!!");
+									music.m2();
 									pan.bingo3();
 									score += 100;
 									rdao.rankInsert(phone, score);

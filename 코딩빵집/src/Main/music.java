@@ -25,3 +25,5 @@ public class music {
 
 	}
 }
+
+//せせ~ せせ~ せせ~ ぞしぜ せせ~
