@@ -21,7 +21,7 @@ public class music {
 	}
 	public static void m4() {
 		MP3Player mp3 = new MP3Player();
-		mp3.play(".//music//‹¯.mp3");
+		mp3.play(".//music//¿À´ä.mp3");
 
 	}
 }
